@@ -1,2 +1,2 @@
 # Sirius
-Sirius - A Secure Multi-Cloud Network Virtualization
+Sirius - a Secure Multi-Cloud Network Virtualization
