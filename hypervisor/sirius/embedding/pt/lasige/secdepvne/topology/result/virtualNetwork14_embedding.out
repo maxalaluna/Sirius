@@ -1,0 +1,822 @@
+GLPSOL: GLPK LP/MIP Solver, v4.52
+Parameter(s) specified in the command line:
+ --model /home/floodlight/src/main/java/net/floodlightcontroller/sirius/embedding/pt/lasige/secdepvne/topology/SecDep_MIP.mod
+ --data /home/floodlight/src/main/java/net/floodlightcontroller/sirius/embedding/pt/lasige/secdepvne/topology/result/virtualNetwork14_embedding.dat
+Reading model section from /home/floodlight/src/main/java/net/floodlightcontroller/sirius/embedding/pt/lasige/secdepvne/topology/SecDep_MIP.mod...
+210 lines were read
+Reading data section from /home/floodlight/src/main/java/net/floodlightcontroller/sirius/embedding/pt/lasige/secdepvne/topology/result/virtualNetwork14_embedding.dat...
+149 lines were read
+Generating cost...
+Generating fwConst0...
+Generating fwConst1...
+Generating fwConst2...
+Generating fwConst3...
+Generating fwConst4...
+Generating fbConst0...
+Generating fbConst1...
+Generating fbConst2...
+Generating fbConst3...
+Generating fbConst4...
+Generating capConst0...
+Generating capConst1...
+Generating nodeCapConst0...
+Generating nodeCapConst1...
+Generating nodeMapConst0...
+Generating nodeMapConst1...
+Generating nodeMapConst2...
+Generating nodeMapConst3...
+Generating nodeLocConst0...
+Generating nodeLocConst1...
+Generating nodeLocConst2...
+Generating nodeLocConst3...
+Generating nodeLocConst4...
+Generating nodeLocConst5...
+Generating cloudConst0...
+Generating cloudConst1...
+Generating flowConst...
+Generating relConst0...
+Generating relConst1...
+Generating relConst2...
+Generating relConst3...
+Generating relConst4...
+Generating relConst5...
+Generating nodeSecConst0...
+Generating nodeSecConst1...
+Generating linkSecConst0...
+Generating linkSecConst1...
+Generating binConst0...
+Generating binConst1...
+Generating aux0...
+Generating aux1...
+Generating aux2...
+Model has been successfully generated
+GLPK Integer Optimizer, v4.52
+1295 rows, 834 columns, 3128 non-zeros
+356 integer variables, all of which are binary
+Preprocessing...
+20 hidden packing inequaliti(es) were detected
+20 constraint coefficient(s) were reduced
+474 rows, 404 columns, 1314 non-zeros
+292 integer variables, all of which are binary
+Scaling...
+ A: min|aij| =  1.000e+00  max|aij| =  1.000e+03  ratio =  1.000e+03
+GM: min|aij| =  8.032e-01  max|aij| =  1.245e+00  ratio =  1.550e+00
+EQ: min|aij| =  6.590e-01  max|aij| =  1.000e+00  ratio =  1.518e+00
+2N: min|aij| =  5.000e-01  max|aij| =  1.250e+00  ratio =  2.500e+00
+Constructing initial basis...
+Size of triangular part is 360
+Solving LP relaxation...
+GLPK Simplex Optimizer, v4.52
+474 rows, 404 columns, 1314 non-zeros
+      0: obj =   0.000000000e+00  infeas =  9.175e+01 (114)
+*    25: obj =   0.000000000e+00  infeas =  1.166e-15 (114)
+OPTIMAL LP SOLUTION FOUND
+Integer optimization begins...
++    25: mip =     not found yet >=              -inf        (1; 0)
++    65: >>>>>   2.000000000e+00 >=   0.000000000e+00 100.0% (5; 0)
++   108: mip =   2.000000000e+00 >=     tree is empty   0.0% (0; 21)
+INTEGER OPTIMAL SOLUTION FOUND
+Time used:   0.0 secs
+Memory used: 1.6 Mb (1693549 bytes)
+Function cost: 2.000000
+Sum of all phiw to 1 and 2: 2
+Sum of all phib to 1 and 2: 0
+Variable fw[1,2,A,A]: 0.000000
+Variable fw[1,2,A,B]: 0.000000
+Variable fw[1,2,A,C]: 0.000000
+Variable fw[1,2,A,D]: 0.000000
+Variable fw[1,2,A,E]: 0.000000
+Variable fw[1,2,A,F]: 0.000000
+Variable fw[1,2,A,G]: 0.000000
+Variable fw[1,2,A,H]: 0.000000
+Variable fw[1,2,A,I]: 0.000000
+Variable fw[1,2,A,J]: 0.000000
+Variable fw[1,2,A,1]: 0.000000
+Variable fw[1,2,A,2]: 1000.000000
+Variable fw[1,2,B,A]: 1000.000000
+Variable fw[1,2,B,B]: 0.000000
+Variable fw[1,2,B,C]: 0.000000
+Variable fw[1,2,B,D]: 0.000000
+Variable fw[1,2,B,E]: 0.000000
+Variable fw[1,2,B,F]: 0.000000
+Variable fw[1,2,B,G]: 0.000000
+Variable fw[1,2,B,H]: 0.000000
+Variable fw[1,2,B,I]: 0.000000
+Variable fw[1,2,B,J]: 0.000000
+Variable fw[1,2,B,1]: 0.000000
+Variable fw[1,2,B,2]: 0.000000
+Variable fw[1,2,C,A]: 0.000000
+Variable fw[1,2,C,B]: 0.000000
+Variable fw[1,2,C,C]: 0.000000
+Variable fw[1,2,C,D]: 0.000000
+Variable fw[1,2,C,E]: 0.000000
+Variable fw[1,2,C,F]: 0.000000
+Variable fw[1,2,C,G]: 0.000000
+Variable fw[1,2,C,H]: 0.000000
+Variable fw[1,2,C,I]: 0.000000
+Variable fw[1,2,C,J]: 0.000000
+Variable fw[1,2,C,1]: 0.000000
+Variable fw[1,2,C,2]: 0.000000
+Variable fw[1,2,D,A]: 0.000000
+Variable fw[1,2,D,B]: 0.000000
+Variable fw[1,2,D,C]: 0.000000
+Variable fw[1,2,D,D]: 0.000000
+Variable fw[1,2,D,E]: 0.000000
+Variable fw[1,2,D,F]: 0.000000
+Variable fw[1,2,D,G]: 0.000000
+Variable fw[1,2,D,H]: 0.000000
+Variable fw[1,2,D,I]: 0.000000
+Variable fw[1,2,D,J]: 0.000000
+Variable fw[1,2,D,1]: 0.000000
+Variable fw[1,2,D,2]: 0.000000
+Variable fw[1,2,E,A]: 0.000000
+Variable fw[1,2,E,B]: 0.000000
+Variable fw[1,2,E,C]: 0.000000
+Variable fw[1,2,E,D]: 0.000000
+Variable fw[1,2,E,E]: 0.000000
+Variable fw[1,2,E,F]: 0.000000
+Variable fw[1,2,E,G]: 0.000000
+Variable fw[1,2,E,H]: 0.000000
+Variable fw[1,2,E,I]: 0.000000
+Variable fw[1,2,E,J]: 0.000000
+Variable fw[1,2,E,1]: 0.000000
+Variable fw[1,2,E,2]: 0.000000
+Variable fw[1,2,F,A]: 0.000000
+Variable fw[1,2,F,B]: 0.000000
+Variable fw[1,2,F,C]: 0.000000
+Variable fw[1,2,F,D]: 0.000000
+Variable fw[1,2,F,E]: 0.000000
+Variable fw[1,2,F,F]: 0.000000
+Variable fw[1,2,F,G]: 0.000000
+Variable fw[1,2,F,H]: 0.000000
+Variable fw[1,2,F,I]: 0.000000
+Variable fw[1,2,F,J]: 0.000000
+Variable fw[1,2,F,1]: 0.000000
+Variable fw[1,2,F,2]: 0.000000
+Variable fw[1,2,G,A]: 0.000000
+Variable fw[1,2,G,B]: 0.000000
+Variable fw[1,2,G,C]: 0.000000
+Variable fw[1,2,G,D]: 0.000000
+Variable fw[1,2,G,E]: 0.000000
+Variable fw[1,2,G,F]: 0.000000
+Variable fw[1,2,G,G]: 0.000000
+Variable fw[1,2,G,H]: 0.000000
+Variable fw[1,2,G,I]: 0.000000
+Variable fw[1,2,G,J]: 0.000000
+Variable fw[1,2,G,1]: 0.000000
+Variable fw[1,2,G,2]: 0.000000
+Variable fw[1,2,H,A]: 0.000000
+Variable fw[1,2,H,B]: 0.000000
+Variable fw[1,2,H,C]: 0.000000
+Variable fw[1,2,H,D]: 0.000000
+Variable fw[1,2,H,E]: 0.000000
+Variable fw[1,2,H,F]: 0.000000
+Variable fw[1,2,H,G]: 0.000000
+Variable fw[1,2,H,H]: 0.000000
+Variable fw[1,2,H,I]: 0.000000
+Variable fw[1,2,H,J]: 0.000000
+Variable fw[1,2,H,1]: 0.000000
+Variable fw[1,2,H,2]: 0.000000
+Variable fw[1,2,I,A]: 0.000000
+Variable fw[1,2,I,B]: 0.000000
+Variable fw[1,2,I,C]: 0.000000
+Variable fw[1,2,I,D]: 0.000000
+Variable fw[1,2,I,E]: 0.000000
+Variable fw[1,2,I,F]: 0.000000
+Variable fw[1,2,I,G]: 0.000000
+Variable fw[1,2,I,H]: 0.000000
+Variable fw[1,2,I,I]: 0.000000
+Variable fw[1,2,I,J]: 0.000000
+Variable fw[1,2,I,1]: 0.000000
+Variable fw[1,2,I,2]: 0.000000
+Variable fw[1,2,J,A]: 0.000000
+Variable fw[1,2,J,B]: 0.000000
+Variable fw[1,2,J,C]: 0.000000
+Variable fw[1,2,J,D]: 0.000000
+Variable fw[1,2,J,E]: 0.000000
+Variable fw[1,2,J,F]: 0.000000
+Variable fw[1,2,J,G]: 0.000000
+Variable fw[1,2,J,H]: 0.000000
+Variable fw[1,2,J,I]: 0.000000
+Variable fw[1,2,J,J]: 0.000000
+Variable fw[1,2,J,1]: 0.000000
+Variable fw[1,2,J,2]: 0.000000
+Variable fw[1,2,1,A]: 0.000000
+Variable fw[1,2,1,B]: 1000.000000
+Variable fw[1,2,1,C]: 0.000000
+Variable fw[1,2,1,D]: 0.000000
+Variable fw[1,2,1,E]: 0.000000
+Variable fw[1,2,1,F]: 0.000000
+Variable fw[1,2,1,G]: 0.000000
+Variable fw[1,2,1,H]: 0.000000
+Variable fw[1,2,1,I]: 0.000000
+Variable fw[1,2,1,J]: 0.000000
+Variable fw[1,2,1,1]: 0.000000
+Variable fw[1,2,1,2]: 0.000000
+Variable fw[1,2,2,A]: 0.000000
+Variable fw[1,2,2,B]: 0.000000
+Variable fw[1,2,2,C]: 0.000000
+Variable fw[1,2,2,D]: 0.000000
+Variable fw[1,2,2,E]: 0.000000
+Variable fw[1,2,2,F]: 0.000000
+Variable fw[1,2,2,G]: 0.000000
+Variable fw[1,2,2,H]: 0.000000
+Variable fw[1,2,2,I]: 0.000000
+Variable fw[1,2,2,J]: 0.000000
+Variable fw[1,2,2,1]: 0.000000
+Variable fw[1,2,2,2]: 0.000000
+Variable fb[1,2,A,A]: 0.000000
+Variable fb[1,2,A,B]: 0.000000
+Variable fb[1,2,A,C]: 0.000000
+Variable fb[1,2,A,D]: 0.000000
+Variable fb[1,2,A,E]: 0.000000
+Variable fb[1,2,A,F]: 0.000000
+Variable fb[1,2,A,G]: 0.000000
+Variable fb[1,2,A,H]: 0.000000
+Variable fb[1,2,A,I]: 0.000000
+Variable fb[1,2,A,J]: 0.000000
+Variable fb[1,2,A,1]: 0.000000
+Variable fb[1,2,A,2]: 0.000000
+Variable fb[1,2,B,A]: 0.000000
+Variable fb[1,2,B,B]: 0.000000
+Variable fb[1,2,B,C]: 0.000000
+Variable fb[1,2,B,D]: 0.000000
+Variable fb[1,2,B,E]: 0.000000
+Variable fb[1,2,B,F]: 0.000000
+Variable fb[1,2,B,G]: 0.000000
+Variable fb[1,2,B,H]: 0.000000
+Variable fb[1,2,B,I]: 0.000000
+Variable fb[1,2,B,J]: 0.000000
+Variable fb[1,2,B,1]: 0.000000
+Variable fb[1,2,B,2]: 0.000000
+Variable fb[1,2,C,A]: 0.000000
+Variable fb[1,2,C,B]: 0.000000
+Variable fb[1,2,C,C]: 0.000000
+Variable fb[1,2,C,D]: 0.000000
+Variable fb[1,2,C,E]: 0.000000
+Variable fb[1,2,C,F]: 0.000000
+Variable fb[1,2,C,G]: 0.000000
+Variable fb[1,2,C,H]: 0.000000
+Variable fb[1,2,C,I]: 0.000000
+Variable fb[1,2,C,J]: 0.000000
+Variable fb[1,2,C,1]: 0.000000
+Variable fb[1,2,C,2]: 0.000000
+Variable fb[1,2,D,A]: 0.000000
+Variable fb[1,2,D,B]: 0.000000
+Variable fb[1,2,D,C]: 0.000000
+Variable fb[1,2,D,D]: 0.000000
+Variable fb[1,2,D,E]: 0.000000
+Variable fb[1,2,D,F]: 0.000000
+Variable fb[1,2,D,G]: 0.000000
+Variable fb[1,2,D,H]: 0.000000
+Variable fb[1,2,D,I]: 0.000000
+Variable fb[1,2,D,J]: 0.000000
+Variable fb[1,2,D,1]: 0.000000
+Variable fb[1,2,D,2]: 0.000000
+Variable fb[1,2,E,A]: 0.000000
+Variable fb[1,2,E,B]: 0.000000
+Variable fb[1,2,E,C]: 0.000000
+Variable fb[1,2,E,D]: 0.000000
+Variable fb[1,2,E,E]: 0.000000
+Variable fb[1,2,E,F]: 0.000000
+Variable fb[1,2,E,G]: 0.000000
+Variable fb[1,2,E,H]: 0.000000
+Variable fb[1,2,E,I]: 0.000000
+Variable fb[1,2,E,J]: 0.000000
+Variable fb[1,2,E,1]: 0.000000
+Variable fb[1,2,E,2]: 0.000000
+Variable fb[1,2,F,A]: 0.000000
+Variable fb[1,2,F,B]: 0.000000
+Variable fb[1,2,F,C]: 0.000000
+Variable fb[1,2,F,D]: 0.000000
+Variable fb[1,2,F,E]: 0.000000
+Variable fb[1,2,F,F]: 0.000000
+Variable fb[1,2,F,G]: 0.000000
+Variable fb[1,2,F,H]: 0.000000
+Variable fb[1,2,F,I]: 0.000000
+Variable fb[1,2,F,J]: 0.000000
+Variable fb[1,2,F,1]: 0.000000
+Variable fb[1,2,F,2]: 0.000000
+Variable fb[1,2,G,A]: 0.000000
+Variable fb[1,2,G,B]: 0.000000
+Variable fb[1,2,G,C]: 0.000000
+Variable fb[1,2,G,D]: 0.000000
+Variable fb[1,2,G,E]: 0.000000
+Variable fb[1,2,G,F]: 0.000000
+Variable fb[1,2,G,G]: 0.000000
+Variable fb[1,2,G,H]: 0.000000
+Variable fb[1,2,G,I]: 0.000000
+Variable fb[1,2,G,J]: 0.000000
+Variable fb[1,2,G,1]: 0.000000
+Variable fb[1,2,G,2]: 0.000000
+Variable fb[1,2,H,A]: 0.000000
+Variable fb[1,2,H,B]: 0.000000
+Variable fb[1,2,H,C]: 0.000000
+Variable fb[1,2,H,D]: 0.000000
+Variable fb[1,2,H,E]: 0.000000
+Variable fb[1,2,H,F]: 0.000000
+Variable fb[1,2,H,G]: 0.000000
+Variable fb[1,2,H,H]: 0.000000
+Variable fb[1,2,H,I]: 0.000000
+Variable fb[1,2,H,J]: 0.000000
+Variable fb[1,2,H,1]: 0.000000
+Variable fb[1,2,H,2]: 0.000000
+Variable fb[1,2,I,A]: 0.000000
+Variable fb[1,2,I,B]: 0.000000
+Variable fb[1,2,I,C]: 0.000000
+Variable fb[1,2,I,D]: 0.000000
+Variable fb[1,2,I,E]: 0.000000
+Variable fb[1,2,I,F]: 0.000000
+Variable fb[1,2,I,G]: 0.000000
+Variable fb[1,2,I,H]: 0.000000
+Variable fb[1,2,I,I]: 0.000000
+Variable fb[1,2,I,J]: 0.000000
+Variable fb[1,2,I,1]: 0.000000
+Variable fb[1,2,I,2]: 0.000000
+Variable fb[1,2,J,A]: 0.000000
+Variable fb[1,2,J,B]: 0.000000
+Variable fb[1,2,J,C]: 0.000000
+Variable fb[1,2,J,D]: 0.000000
+Variable fb[1,2,J,E]: 0.000000
+Variable fb[1,2,J,F]: 0.000000
+Variable fb[1,2,J,G]: 0.000000
+Variable fb[1,2,J,H]: 0.000000
+Variable fb[1,2,J,I]: 0.000000
+Variable fb[1,2,J,J]: 0.000000
+Variable fb[1,2,J,1]: 0.000000
+Variable fb[1,2,J,2]: 0.000000
+Variable fb[1,2,1,A]: 0.000000
+Variable fb[1,2,1,B]: 0.000000
+Variable fb[1,2,1,C]: 0.000000
+Variable fb[1,2,1,D]: 0.000000
+Variable fb[1,2,1,E]: 0.000000
+Variable fb[1,2,1,F]: 0.000000
+Variable fb[1,2,1,G]: 0.000000
+Variable fb[1,2,1,H]: 0.000000
+Variable fb[1,2,1,I]: 0.000000
+Variable fb[1,2,1,J]: 0.000000
+Variable fb[1,2,1,1]: 0.000000
+Variable fb[1,2,1,2]: 0.000000
+Variable fb[1,2,2,A]: 0.000000
+Variable fb[1,2,2,B]: 0.000000
+Variable fb[1,2,2,C]: 0.000000
+Variable fb[1,2,2,D]: 0.000000
+Variable fb[1,2,2,E]: 0.000000
+Variable fb[1,2,2,F]: 0.000000
+Variable fb[1,2,2,G]: 0.000000
+Variable fb[1,2,2,H]: 0.000000
+Variable fb[1,2,2,I]: 0.000000
+Variable fb[1,2,2,J]: 0.000000
+Variable fb[1,2,2,1]: 0.000000
+Variable fb[1,2,2,2]: 0.000000
+Variable phiw[1,2,A,A]: 0
+Variable phiw[1,2,A,B]: 1
+Variable phiw[1,2,A,C]: 0
+Variable phiw[1,2,A,D]: 0
+Variable phiw[1,2,A,E]: 0
+Variable phiw[1,2,A,F]: 0
+Variable phiw[1,2,A,G]: 0
+Variable phiw[1,2,A,H]: 0
+Variable phiw[1,2,A,I]: 0
+Variable phiw[1,2,A,J]: 0
+Variable phiw[1,2,A,1]: 0
+Variable phiw[1,2,A,2]: 1
+Variable phiw[1,2,B,A]: 1
+Variable phiw[1,2,B,B]: 0
+Variable phiw[1,2,B,C]: 0
+Variable phiw[1,2,B,D]: 0
+Variable phiw[1,2,B,E]: 0
+Variable phiw[1,2,B,F]: 0
+Variable phiw[1,2,B,G]: 0
+Variable phiw[1,2,B,H]: 0
+Variable phiw[1,2,B,I]: 0
+Variable phiw[1,2,B,J]: 0
+Variable phiw[1,2,B,1]: 1
+Variable phiw[1,2,B,2]: 0
+Variable phiw[1,2,C,A]: 0
+Variable phiw[1,2,C,B]: 0
+Variable phiw[1,2,C,C]: 0
+Variable phiw[1,2,C,D]: 0
+Variable phiw[1,2,C,E]: 0
+Variable phiw[1,2,C,F]: 0
+Variable phiw[1,2,C,G]: 0
+Variable phiw[1,2,C,H]: 0
+Variable phiw[1,2,C,I]: 0
+Variable phiw[1,2,C,J]: 0
+Variable phiw[1,2,C,1]: 0
+Variable phiw[1,2,C,2]: 0
+Variable phiw[1,2,D,A]: 0
+Variable phiw[1,2,D,B]: 0
+Variable phiw[1,2,D,C]: 0
+Variable phiw[1,2,D,D]: 0
+Variable phiw[1,2,D,E]: 0
+Variable phiw[1,2,D,F]: 0
+Variable phiw[1,2,D,G]: 0
+Variable phiw[1,2,D,H]: 0
+Variable phiw[1,2,D,I]: 0
+Variable phiw[1,2,D,J]: 0
+Variable phiw[1,2,D,1]: 0
+Variable phiw[1,2,D,2]: 0
+Variable phiw[1,2,E,A]: 0
+Variable phiw[1,2,E,B]: 0
+Variable phiw[1,2,E,C]: 0
+Variable phiw[1,2,E,D]: 0
+Variable phiw[1,2,E,E]: 0
+Variable phiw[1,2,E,F]: 0
+Variable phiw[1,2,E,G]: 0
+Variable phiw[1,2,E,H]: 0
+Variable phiw[1,2,E,I]: 0
+Variable phiw[1,2,E,J]: 0
+Variable phiw[1,2,E,1]: 0
+Variable phiw[1,2,E,2]: 0
+Variable phiw[1,2,F,A]: 0
+Variable phiw[1,2,F,B]: 0
+Variable phiw[1,2,F,C]: 0
+Variable phiw[1,2,F,D]: 0
+Variable phiw[1,2,F,E]: 0
+Variable phiw[1,2,F,F]: 0
+Variable phiw[1,2,F,G]: 0
+Variable phiw[1,2,F,H]: 0
+Variable phiw[1,2,F,I]: 0
+Variable phiw[1,2,F,J]: 0
+Variable phiw[1,2,F,1]: 0
+Variable phiw[1,2,F,2]: 0
+Variable phiw[1,2,G,A]: 0
+Variable phiw[1,2,G,B]: 0
+Variable phiw[1,2,G,C]: 0
+Variable phiw[1,2,G,D]: 0
+Variable phiw[1,2,G,E]: 0
+Variable phiw[1,2,G,F]: 0
+Variable phiw[1,2,G,G]: 0
+Variable phiw[1,2,G,H]: 0
+Variable phiw[1,2,G,I]: 0
+Variable phiw[1,2,G,J]: 0
+Variable phiw[1,2,G,1]: 0
+Variable phiw[1,2,G,2]: 0
+Variable phiw[1,2,H,A]: 0
+Variable phiw[1,2,H,B]: 0
+Variable phiw[1,2,H,C]: 0
+Variable phiw[1,2,H,D]: 0
+Variable phiw[1,2,H,E]: 0
+Variable phiw[1,2,H,F]: 0
+Variable phiw[1,2,H,G]: 0
+Variable phiw[1,2,H,H]: 0
+Variable phiw[1,2,H,I]: 0
+Variable phiw[1,2,H,J]: 0
+Variable phiw[1,2,H,1]: 0
+Variable phiw[1,2,H,2]: 0
+Variable phiw[1,2,I,A]: 0
+Variable phiw[1,2,I,B]: 0
+Variable phiw[1,2,I,C]: 0
+Variable phiw[1,2,I,D]: 0
+Variable phiw[1,2,I,E]: 0
+Variable phiw[1,2,I,F]: 0
+Variable phiw[1,2,I,G]: 0
+Variable phiw[1,2,I,H]: 0
+Variable phiw[1,2,I,I]: 0
+Variable phiw[1,2,I,J]: 0
+Variable phiw[1,2,I,1]: 0
+Variable phiw[1,2,I,2]: 0
+Variable phiw[1,2,J,A]: 0
+Variable phiw[1,2,J,B]: 0
+Variable phiw[1,2,J,C]: 0
+Variable phiw[1,2,J,D]: 0
+Variable phiw[1,2,J,E]: 0
+Variable phiw[1,2,J,F]: 0
+Variable phiw[1,2,J,G]: 0
+Variable phiw[1,2,J,H]: 0
+Variable phiw[1,2,J,I]: 0
+Variable phiw[1,2,J,J]: 0
+Variable phiw[1,2,J,1]: 0
+Variable phiw[1,2,J,2]: 0
+Variable phiw[1,2,1,A]: 0
+Variable phiw[1,2,1,B]: 1
+Variable phiw[1,2,1,C]: 0
+Variable phiw[1,2,1,D]: 0
+Variable phiw[1,2,1,E]: 0
+Variable phiw[1,2,1,F]: 0
+Variable phiw[1,2,1,G]: 0
+Variable phiw[1,2,1,H]: 0
+Variable phiw[1,2,1,I]: 0
+Variable phiw[1,2,1,J]: 0
+Variable phiw[1,2,1,1]: 0
+Variable phiw[1,2,1,2]: 0
+Variable phiw[1,2,2,A]: 1
+Variable phiw[1,2,2,B]: 0
+Variable phiw[1,2,2,C]: 0
+Variable phiw[1,2,2,D]: 0
+Variable phiw[1,2,2,E]: 0
+Variable phiw[1,2,2,F]: 0
+Variable phiw[1,2,2,G]: 0
+Variable phiw[1,2,2,H]: 0
+Variable phiw[1,2,2,I]: 0
+Variable phiw[1,2,2,J]: 0
+Variable phiw[1,2,2,1]: 0
+Variable phiw[1,2,2,2]: 0
+Variable phib[1,2,A,A]: 0
+Variable phib[1,2,A,B]: 0
+Variable phib[1,2,A,C]: 0
+Variable phib[1,2,A,D]: 0
+Variable phib[1,2,A,E]: 0
+Variable phib[1,2,A,F]: 0
+Variable phib[1,2,A,G]: 0
+Variable phib[1,2,A,H]: 0
+Variable phib[1,2,A,I]: 0
+Variable phib[1,2,A,J]: 0
+Variable phib[1,2,A,1]: 0
+Variable phib[1,2,A,2]: 0
+Variable phib[1,2,B,A]: 0
+Variable phib[1,2,B,B]: 0
+Variable phib[1,2,B,C]: 0
+Variable phib[1,2,B,D]: 0
+Variable phib[1,2,B,E]: 0
+Variable phib[1,2,B,F]: 0
+Variable phib[1,2,B,G]: 0
+Variable phib[1,2,B,H]: 0
+Variable phib[1,2,B,I]: 0
+Variable phib[1,2,B,J]: 0
+Variable phib[1,2,B,1]: 0
+Variable phib[1,2,B,2]: 0
+Variable phib[1,2,C,A]: 0
+Variable phib[1,2,C,B]: 0
+Variable phib[1,2,C,C]: 0
+Variable phib[1,2,C,D]: 0
+Variable phib[1,2,C,E]: 0
+Variable phib[1,2,C,F]: 0
+Variable phib[1,2,C,G]: 0
+Variable phib[1,2,C,H]: 0
+Variable phib[1,2,C,I]: 0
+Variable phib[1,2,C,J]: 0
+Variable phib[1,2,C,1]: 0
+Variable phib[1,2,C,2]: 0
+Variable phib[1,2,D,A]: 0
+Variable phib[1,2,D,B]: 0
+Variable phib[1,2,D,C]: 0
+Variable phib[1,2,D,D]: 0
+Variable phib[1,2,D,E]: 0
+Variable phib[1,2,D,F]: 0
+Variable phib[1,2,D,G]: 0
+Variable phib[1,2,D,H]: 0
+Variable phib[1,2,D,I]: 0
+Variable phib[1,2,D,J]: 0
+Variable phib[1,2,D,1]: 0
+Variable phib[1,2,D,2]: 0
+Variable phib[1,2,E,A]: 0
+Variable phib[1,2,E,B]: 0
+Variable phib[1,2,E,C]: 0
+Variable phib[1,2,E,D]: 0
+Variable phib[1,2,E,E]: 0
+Variable phib[1,2,E,F]: 0
+Variable phib[1,2,E,G]: 0
+Variable phib[1,2,E,H]: 0
+Variable phib[1,2,E,I]: 0
+Variable phib[1,2,E,J]: 0
+Variable phib[1,2,E,1]: 0
+Variable phib[1,2,E,2]: 0
+Variable phib[1,2,F,A]: 0
+Variable phib[1,2,F,B]: 0
+Variable phib[1,2,F,C]: 0
+Variable phib[1,2,F,D]: 0
+Variable phib[1,2,F,E]: 0
+Variable phib[1,2,F,F]: 0
+Variable phib[1,2,F,G]: 0
+Variable phib[1,2,F,H]: 0
+Variable phib[1,2,F,I]: 0
+Variable phib[1,2,F,J]: 0
+Variable phib[1,2,F,1]: 0
+Variable phib[1,2,F,2]: 0
+Variable phib[1,2,G,A]: 0
+Variable phib[1,2,G,B]: 0
+Variable phib[1,2,G,C]: 0
+Variable phib[1,2,G,D]: 0
+Variable phib[1,2,G,E]: 0
+Variable phib[1,2,G,F]: 0
+Variable phib[1,2,G,G]: 0
+Variable phib[1,2,G,H]: 0
+Variable phib[1,2,G,I]: 0
+Variable phib[1,2,G,J]: 0
+Variable phib[1,2,G,1]: 0
+Variable phib[1,2,G,2]: 0
+Variable phib[1,2,H,A]: 0
+Variable phib[1,2,H,B]: 0
+Variable phib[1,2,H,C]: 0
+Variable phib[1,2,H,D]: 0
+Variable phib[1,2,H,E]: 0
+Variable phib[1,2,H,F]: 0
+Variable phib[1,2,H,G]: 0
+Variable phib[1,2,H,H]: 0
+Variable phib[1,2,H,I]: 0
+Variable phib[1,2,H,J]: 0
+Variable phib[1,2,H,1]: 0
+Variable phib[1,2,H,2]: 0
+Variable phib[1,2,I,A]: 0
+Variable phib[1,2,I,B]: 0
+Variable phib[1,2,I,C]: 0
+Variable phib[1,2,I,D]: 0
+Variable phib[1,2,I,E]: 0
+Variable phib[1,2,I,F]: 0
+Variable phib[1,2,I,G]: 0
+Variable phib[1,2,I,H]: 0
+Variable phib[1,2,I,I]: 0
+Variable phib[1,2,I,J]: 0
+Variable phib[1,2,I,1]: 0
+Variable phib[1,2,I,2]: 0
+Variable phib[1,2,J,A]: 0
+Variable phib[1,2,J,B]: 0
+Variable phib[1,2,J,C]: 0
+Variable phib[1,2,J,D]: 0
+Variable phib[1,2,J,E]: 0
+Variable phib[1,2,J,F]: 0
+Variable phib[1,2,J,G]: 0
+Variable phib[1,2,J,H]: 0
+Variable phib[1,2,J,I]: 0
+Variable phib[1,2,J,J]: 0
+Variable phib[1,2,J,1]: 0
+Variable phib[1,2,J,2]: 0
+Variable phib[1,2,1,A]: 0
+Variable phib[1,2,1,B]: 0
+Variable phib[1,2,1,C]: 0
+Variable phib[1,2,1,D]: 0
+Variable phib[1,2,1,E]: 0
+Variable phib[1,2,1,F]: 0
+Variable phib[1,2,1,G]: 0
+Variable phib[1,2,1,H]: 0
+Variable phib[1,2,1,I]: 0
+Variable phib[1,2,1,J]: 0
+Variable phib[1,2,1,1]: 0
+Variable phib[1,2,1,2]: 0
+Variable phib[1,2,2,A]: 0
+Variable phib[1,2,2,B]: 0
+Variable phib[1,2,2,C]: 0
+Variable phib[1,2,2,D]: 0
+Variable phib[1,2,2,E]: 0
+Variable phib[1,2,2,F]: 0
+Variable phib[1,2,2,G]: 0
+Variable phib[1,2,2,H]: 0
+Variable phib[1,2,2,I]: 0
+Variable phib[1,2,2,J]: 0
+Variable phib[1,2,2,1]: 0
+Variable phib[1,2,2,2]: 0
+Variable thetaw[1,A]: 0
+Variable thetaw[1,B]: 1
+Variable thetaw[1,C]: 0
+Variable thetaw[1,D]: 0
+Variable thetaw[1,E]: 0
+Variable thetaw[1,F]: 0
+Variable thetaw[1,G]: 0
+Variable thetaw[1,H]: 0
+Variable thetaw[1,I]: 0
+Variable thetaw[1,J]: 0
+Variable thetaw[2,A]: 1
+Variable thetaw[2,B]: 0
+Variable thetaw[2,C]: 0
+Variable thetaw[2,D]: 0
+Variable thetaw[2,E]: 0
+Variable thetaw[2,F]: 0
+Variable thetaw[2,G]: 0
+Variable thetaw[2,H]: 0
+Variable thetaw[2,I]: 0
+Variable thetaw[2,J]: 0
+Variable thetab[1,A]: 0
+Variable thetab[1,B]: 0
+Variable thetab[1,C]: 0
+Variable thetab[1,D]: 0
+Variable thetab[1,E]: 0
+Variable thetab[1,F]: 0
+Variable thetab[1,G]: 0
+Variable thetab[1,H]: 0
+Variable thetab[1,I]: 0
+Variable thetab[1,J]: 0
+Variable thetab[2,A]: 0
+Variable thetab[2,B]: 0
+Variable thetab[2,C]: 0
+Variable thetab[2,D]: 0
+Variable thetab[2,E]: 0
+Variable thetab[2,F]: 0
+Variable thetab[2,G]: 0
+Variable thetab[2,H]: 0
+Variable thetab[2,I]: 0
+Variable thetab[2,J]: 0
+Variable cw[1,1]: 0
+Variable cw[2,1]: 1
+Variable cw[1,2]: 1
+Variable cw[2,2]: 0
+Variable cb[1,1]: 0
+Variable cb[2,1]: 0
+Variable cb[1,2]: 0
+Variable cb[2,2]: 0
+Variable r[A,A]: 0.000000
+Variable r[A,B]: 0.000000
+Variable r[A,C]: 0.000000
+Variable r[A,D]: 0.000000
+Variable r[A,E]: 0.000000
+Variable r[A,F]: 0.000000
+Variable r[A,G]: 0.000000
+Variable r[A,H]: 0.000000
+Variable r[A,I]: 0.000000
+Variable r[A,J]: 0.000000
+Variable r[B,A]: 0.000000
+Variable r[B,B]: 0.000000
+Variable r[B,C]: 0.000000
+Variable r[B,D]: 0.000000
+Variable r[B,E]: 0.000000
+Variable r[B,F]: 0.000000
+Variable r[B,G]: 0.000000
+Variable r[B,H]: 0.000000
+Variable r[B,I]: 0.000000
+Variable r[B,J]: 0.000000
+Variable r[C,A]: 0.000000
+Variable r[C,B]: 0.000000
+Variable r[C,C]: 0.000000
+Variable r[C,D]: 0.000000
+Variable r[C,E]: 0.000000
+Variable r[C,F]: 0.000000
+Variable r[C,G]: 0.000000
+Variable r[C,H]: 0.000000
+Variable r[C,I]: 0.000000
+Variable r[C,J]: 0.000000
+Variable r[D,A]: 0.000000
+Variable r[D,B]: 0.000000
+Variable r[D,C]: 0.000000
+Variable r[D,D]: 0.000000
+Variable r[D,E]: 0.000000
+Variable r[D,F]: 0.000000
+Variable r[D,G]: 0.000000
+Variable r[D,H]: 0.000000
+Variable r[D,I]: 0.000000
+Variable r[D,J]: 0.000000
+Variable r[E,A]: 0.000000
+Variable r[E,B]: 0.000000
+Variable r[E,C]: 0.000000
+Variable r[E,D]: 0.000000
+Variable r[E,E]: 0.000000
+Variable r[E,F]: 0.000000
+Variable r[E,G]: 0.000000
+Variable r[E,H]: 0.000000
+Variable r[E,I]: 0.000000
+Variable r[E,J]: 0.000000
+Variable r[F,A]: 0.000000
+Variable r[F,B]: 0.000000
+Variable r[F,C]: 0.000000
+Variable r[F,D]: 0.000000
+Variable r[F,E]: 0.000000
+Variable r[F,F]: 0.000000
+Variable r[F,G]: 0.000000
+Variable r[F,H]: 0.000000
+Variable r[F,I]: 0.000000
+Variable r[F,J]: 0.000000
+Variable r[G,A]: 0.000000
+Variable r[G,B]: 0.000000
+Variable r[G,C]: 0.000000
+Variable r[G,D]: 0.000000
+Variable r[G,E]: 0.000000
+Variable r[G,F]: 0.000000
+Variable r[G,G]: 0.000000
+Variable r[G,H]: 0.000000
+Variable r[G,I]: 0.000000
+Variable r[G,J]: 0.000000
+Variable r[H,A]: 0.000000
+Variable r[H,B]: 0.000000
+Variable r[H,C]: 0.000000
+Variable r[H,D]: 0.000000
+Variable r[H,E]: 0.000000
+Variable r[H,F]: 0.000000
+Variable r[H,G]: 0.000000
+Variable r[H,H]: 0.000000
+Variable r[H,I]: 0.000000
+Variable r[H,J]: 0.000000
+Variable r[I,A]: 0.000000
+Variable r[I,B]: 0.000000
+Variable r[I,C]: 0.000000
+Variable r[I,D]: 0.000000
+Variable r[I,E]: 0.000000
+Variable r[I,F]: 0.000000
+Variable r[I,G]: 0.000000
+Variable r[I,H]: 0.000000
+Variable r[I,I]: 0.000000
+Variable r[I,J]: 0.000000
+Variable r[J,A]: 0.000000
+Variable r[J,B]: 0.000000
+Variable r[J,C]: 0.000000
+Variable r[J,D]: 0.000000
+Variable r[J,E]: 0.000000
+Variable r[J,F]: 0.000000
+Variable r[J,G]: 0.000000
+Variable r[J,H]: 0.000000
+Variable r[J,I]: 0.000000
+Variable r[J,J]: 0.000000
+Variable cw[1,1] + cb[1,1]: 0
+Variable cw[1,2] + cb[1,2]: 1
+Variable cw[2,1] + cb[2,1]: 1
+Variable cw[2,2] + cb[2,2]: 0
+Variable gama[A]: 0.000000
+Variable gama[B]: 0.000000
+Variable gama[C]: 0.000000
+Variable gama[D]: 0.000000
+Variable gama[E]: 0.000000
+Variable gama[F]: 0.000000
+Variable gama[G]: 0.000000
+Variable gama[H]: 0.000000
+Variable gama[I]: 0.000000
+Variable gama[J]: 0.000000
+Model has been successfully processed

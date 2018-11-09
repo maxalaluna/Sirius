@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<node id="1">
+<index>1</index>
+<type>host</type>
+<name>hv1</name>
+<cloud>2</cloud>
+<tenant>1</tenant>
+</node>
+<node id="2">
+<index>2</index>
+<type>host</type>
+<name>hv2</name>
+<cloud>2</cloud>
+<tenant>1</tenant>
+</node>
+<node id="3">
+<index>3</index>
+<type>switch</type>
+<name>sv1</name>
+<cloud>2</cloud>
+<cpu>20</cpu>
+<tenant>1</tenant>
+</node>
+<node id="4">
+<index>4</index>
+<type>host</type>
+<name>hv3</name>
+<cloud>1</cloud>
+<tenant>1</tenant>
+</node>
+<node id="5">
+<index>5</index>
+<type>host</type>
+<name>hv4</name>
+<cloud>1</cloud>
+<tenant>1</tenant>
+</node>
+<node id="6">
+<index>6</index>
+<type>switch</type>
+<name>sv2</name>
+<cloud>1</cloud>
+<cpu>20</cpu>
+<tenant>1</tenant>
+</node>
+<link>
+<from>1</from>
+<to>3</to>
+</link>
+<link>
+<from>2</from>
+<to>3</to>
+</link>
+<link>
+<from>4</from>
+<to>6</to>
+</link>
+<link>
+<from>5</from>
+<to>6</to>
+</link>
+<link>
+<from>3</from>
+<to>6</to>
+<band>50</band>
+<secure>0</secure>
+</link>
+</config>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<cloud id="0">
+<name>default</name>
+<provider>nc</provider>
+<username>nc</username>
+<identity>nc</identity>
+<credential>nc</credential>
+</cloud>
+<vm id="0">
+<name>vm1</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="0">
+<name>vm1</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="0">
+<name>vm1</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<node id="1">
+<type>switch</type>
+<index>1</index>
+<name>s1</name>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<node id="2">
+<type>host</type>
+<index>1</index>
+<name>h1</name>
+<ip>10.0.0.1</ip>
+<mac>00:00:00:00:00:01</mac>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<node id="3">
+<type>switch</type>
+<index>2</index>
+<name>s2</name>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<node id="4">
+<type>host</type>
+<index>2</index>
+<name>h2</name>
+<ip>10.0.0.2</ip>
+<mac>00:00:00:00:00:02</mac>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<node id="5">
+<type>switch</type>
+<index>3</index>
+<name>s3</name>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<node id="6">
+<type>host</type>
+<index>3</index>
+<name>h3</name>
+<ip>10.0.0.3</ip>
+<mac>00:00:00:00:00:03</mac>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<link id="1">
+<from>2</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="2">
+<from>1</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="3">
+<from>4</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="4">
+<from>1</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="5">
+<from>6</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="6">
+<from>3</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+</link>
+</config>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config id="0">
+<image>
+<name>progrium/busybox</name>
+<script>docker run -dit --name %NAME% --hostname %NAME% --net=none progrium/busybox sh</script>
+</image>
+<cloud id="1">
+<name>fcul</name>
+<provider>fcul</provider>
+<username>sirius</username>
+<security>1</security>
+<key>fcul</key>
+</cloud>
+<cloud id="2">
+<name>amazon</name>
+<provider>amazon</provider>
+<username>ubuntu</username>
+<identity>AKIAI7ELXAY6CYI4SF3A</identity>
+<credential>3JPHkxqnXMl0pu/VK7lMqevNq97Fd7vpkvyFCOsH</credential>
+<security>3</security>
+<key>amazon</key>
+</cloud>
+<cloud id="3">
+<name>google</name>
+<provider>google</provider>
+<username>sirius</username>
+<identity>458401379392-compute@developer.gserviceaccount.com</identity>
+<credential>credential.json</credential>
+<security>2</security>
+<key>google</key>
+</cloud>
+<vm id="1">
+<name>front-end</name>
+<cid>1</cid>
+<location>Portugal</location>
+<public-ip>194.117.20.241</public-ip>
+<private-ip>194.117.20.241</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="2">
+<name>a1</name>
+<pid>eu-central-1/i-00fde5c4e1ecca805</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>18.194.207.52</public-ip>
+<private-ip>172.31.19.179</private-ip>
+<gateway>true</gateway>
+<deployed>true</deployed>
+</vm>
+<vm id="3">
+<name>g1</name>
+<pid>https://www.googleapis.com/compute/v1/projects/cedar-carving-88214/zones/europe-west1-b/instances/g1</pid>
+<cid>3</cid>
+<location>europe-west1-b</location>
+<public-ip>35.195.163.159</public-ip>
+<private-ip>10.132.0.6</private-ip>
+<gateway>true</gateway>
+<deployed>true</deployed>
+</vm>
+<vm id="4">
+<name>a2</name>
+<pid>eu-central-1/i-0448da55349ce9c5e</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>52.59.228.50</public-ip>
+<private-ip>172.31.28.147</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="5">
+<name>a4</name>
+<pid>eu-central-1/i-0193e3c59dfe8a824</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>54.93.107.89</public-ip>
+<private-ip>172.31.17.41</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="6">
+<name>a3</name>
+<pid>eu-central-1/i-00559761095364a29</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>35.158.97.94</public-ip>
+<private-ip>172.31.20.189</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="7">
+<name>a5</name>
+<pid>eu-central-1/i-02247fcde1796b56f</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>54.93.39.45</public-ip>
+<private-ip>172.31.27.185</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="8">
+<name>g2</name>
+<pid>https://www.googleapis.com/compute/v1/projects/cedar-carving-88214/zones/europe-west1-b/instances/g2</pid>
+<cid>3</cid>
+<location>europe-west1-b</location>
+<public-ip>35.195.18.205</public-ip>
+<private-ip>10.132.0.7</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="9">
+<name>g3</name>
+<pid>https://www.googleapis.com/compute/v1/projects/cedar-carving-88214/zones/europe-west1-b/instances/g3</pid>
+<cid>3</cid>
+<location>europe-west1-b</location>
+<public-ip>35.195.150.221</public-ip>
+<private-ip>10.132.0.8</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="10">
+<name>g4</name>
+<pid>https://www.googleapis.com/compute/v1/projects/cedar-carving-88214/zones/europe-west1-b/instances/g4</pid>
+<cid>3</cid>
+<location>europe-west1-b</location>
+<public-ip>35.195.37.155</public-ip>
+<private-ip>10.132.0.9</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="11">
+<name>g5</name>
+<pid>https://www.googleapis.com/compute/v1/projects/cedar-carving-88214/zones/europe-west1-b/instances/g5</pid>
+<cid>3</cid>
+<location>europe-west1-b</location>
+<public-ip>35.190.195.15</public-ip>
+<private-ip>10.132.0.10</private-ip>
+<deployed>true</deployed>
+</vm>
+<node id="1">
+<type>controller</type>
+<index>1</index>
+<name>controller</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<ip>10.8.0.1</ip>
+<port>6653</port>
+</node>
+<node id="2">
+<type>switch</type>
+<index>1</index>
+<name>ovs1</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<openflow>3</openflow>
+<security>1</security>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="3">
+<type>switch</type>
+<index>2</index>
+<name>ovs2</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<openflow>3</openflow>
+<security>1</security>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="4">
+<type>switch</type>
+<index>3</index>
+<name>ovs3</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<openflow>3</openflow>
+<security>1</security>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="5">
+<type>switch</type>
+<index>4</index>
+<name>ovs4</name>
+<vid>4</vid>
+<openflow>3</openflow>
+<security>1</security>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="6">
+<type>switch</type>
+<index>5</index>
+<name>ovs5</name>
+<vid>5</vid>
+<openflow>3</openflow>
+<security>1</security>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="7">
+<type>switch</type>
+<index>6</index>
+<name>ovs6</name>
+<vid>6</vid>
+<openflow>3</openflow>
+<security>1</security>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="8">
+<type>switch</type>
+<index>7</index>
+<name>ovs7</name>
+<vid>7</vid>
+<openflow>3</openflow>
+<security>1</security>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="9">
+<type>switch</type>
+<index>8</index>
+<name>ovs8</name>
+<vid>8</vid>
+<openflow>3</openflow>
+<security>1</security>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="10">
+<type>switch</type>
+<index>9</index>
+<name>ovs9</name>
+<vid>9</vid>
+<openflow>3</openflow>
+<security>1</security>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="11">
+<type>switch</type>
+<index>10</index>
+<name>ovs10</name>
+<vid>10</vid>
+<openflow>3</openflow>
+<security>1</security>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="12">
+<type>switch</type>
+<index>11</index>
+<name>ovs11</name>
+<vid>11</vid>
+<openflow>3</openflow>
+<security>1</security>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<link id="1">
+<from>1</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+</link>
+<link id="2">
+<from>2</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+<deployed>true</deployed>
+</link>
+<link id="3">
+<from>2</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+<deployed>true</deployed>
+</link>
+<link id="4">
+<from>3</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+<deployed>true</deployed>
+</link>
+<link id="5">
+<from>5</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+</link>
+<link id="6">
+<from>6</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+</link>
+<link id="7">
+<from>7</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+</link>
+<link id="8">
+<from>8</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+</link>
+<link id="9">
+<from>9</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+</link>
+<link id="10">
+<from>10</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+</link>
+<link id="11">
+<from>11</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+</link>
+<link id="12">
+<from>12</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+<security>1</security>
+</link>
+</config>

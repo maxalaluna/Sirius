@@ -1,0 +1,48 @@
+GLPSOL: GLPK LP/MIP Solver, v4.52
+Parameter(s) specified in the command line:
+ --model /home/secdepvne-master/glpk/modFiles/FULLGREEDY_MCF_HEURISTIC.mod
+ --data /home/secdepvne-master/glpk/datFiles/Heuristic/milpHeu/Waxman/100/FGA3_MCF1/randomMCF_req14.dat
+Reading model section from /home/secdepvne-master/glpk/modFiles/FULLGREEDY_MCF_HEURISTIC.mod...
+49 lines were read
+Reading data section from /home/secdepvne-master/glpk/datFiles/Heuristic/milpHeu/Waxman/100/FGA3_MCF1/randomMCF_req14.dat...
+146 lines were read
+Generating cost...
+Generating capcon...
+Generating demsat1...
+Generating demsat2...
+Generating flocon...
+Model has been successfully generated
+GLPK Simplex Optimizer, v4.52
+10801 rows, 80000 columns, 397600 non-zeros
+Preprocessing...
+3198 rows, 19184 columns, 76736 non-zeros
+Scaling...
+ A: min|aij| =  1.000e+00  max|aij| =  1.000e+00  ratio =  1.000e+00
+Problem data seem to be well scaled
+Constructing initial basis...
+Size of triangular part is 3190
+      0: obj =   1.782499000e+02  infeas =  1.484e+03 (8)
+*    78: obj =   2.607433900e+03  infeas =  0.000e+00 (8)
+*   334: obj =   2.429184000e+03  infeas =  0.000e+00 (8)
+OPTIMAL LP SOLUTION FOUND
+Time used:   0.5 secs
+Memory used: 77.4 Mb (81146742 bytes)
+Function cost: 2429.184000
+Variable fw[f0,58,96]: 104.734300
+Variable fw[f0,96,35]: 104.734300
+Variable fw[f1,58,96]: 151.007600
+Variable fw[f1,96,6]: 151.007600
+Variable fw[f2,81,97]: 162.348600
+Variable fw[f2,97,8]: 162.348600
+Variable fw[f3,90,96]: 102.980400
+Variable fw[f3,96,6]: 102.980400
+Variable fw[f4,31,19]: 166.841900
+Variable fw[f4,90,31]: 166.841900
+Variable fw[f5,2,8]: 178.249900
+Variable fw[f5,90,2]: 178.249900
+Variable fw[f6,19,99]: 172.657400
+Variable fw[f6,99,16]: 172.657400
+Variable fw[f7,16,99]: 175.771900
+Variable fw[f7,99,36]: 175.771900
+Model has been successfully processed
+

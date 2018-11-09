@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<node id="1">
+<index>1</index>
+<type>controller</type>
+<name>c1</name>
+<ip>192.168.213.128</ip>
+<x>-97</x>
+<y>253</y>
+</node>
+<node id="2">
+<index>1</index>
+<type>switch</type>
+<name>s1</name>
+<ip>192.168.56.130</ip>
+<x>-183</x>
+<y>36</y>
+<cloud>1</cloud>
+<dpid>00:00:00:00:00:00:00:01</dpid>
+</node>
+<node id="3">
+<index>1</index>
+<type>host</type>
+<name>h1</name>
+<ip>10.0.1.1</ip>
+<x>-127</x>
+<y>122</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:01</mac>
+</node>
+<node id="4">
+<index>2</index>
+<type>host</type>
+<name>h2</name>
+<ip>10.0.2.1</ip>
+<x>-205</x>
+<y>136</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:02</mac>
+</node>
+<node id="5">
+<index>3</index>
+<type>host</type>
+<name>h3</name>
+<ip>10.0.3.1</ip>
+<x>-293</x>
+<y>34</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:03</mac>
+</node>
+<node id="6">
+<index>4</index>
+<type>host</type>
+<name>h4</name>
+<ip>10.0.4.1</ip>
+<x>-261</x>
+<y>-51</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:04</mac>
+</node>
+<node id="7">
+<index>5</index>
+<type>host</type>
+<name>h5</name>
+<ip>10.0.5.1</ip>
+<x>-172</x>
+<y>-73</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:05</mac>
+</node>
+<node id="8">
+<index>6</index>
+<type>host</type>
+<name>h6</name>
+<ip>10.0.6.1</ip>
+<x>-89</x>
+<y>-32</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:06</mac>
+</node>
+<node id="9">
+<index>2</index>
+<type>switch</type>
+<name>s2</name>
+<ip>192.168.56.130</ip>
+<x>535</x>
+<y>40</y>
+<cloud>2</cloud>
+<dpid>00:00:00:00:00:00:00:02</dpid>
+<secure>2</secure>
+</node>
+<node id="10">
+<index>7</index>
+<type>host</type>
+<name>h7</name>
+<ip>10.0.7.1</ip>
+<x>442</x>
+<y>-30</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:07</mac>
+</node>
+<node id="11">
+<index>8</index>
+<type>host</type>
+<name>h8</name>
+<ip>10.0.8.1</ip>
+<x>514</x>
+<y>-73</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:08</mac>
+</node>
+<node id="12">
+<index>9</index>
+<type>host</type>
+<name>h9</name>
+<ip>10.0.9.1</ip>
+<x>605</x>
+<y>-49</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:09</mac>
+</node>
+<node id="13">
+<index>10</index>
+<type>host</type>
+<name>h10</name>
+<ip>10.0.10.1</ip>
+<x>640</x>
+<y>40</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:0A</mac>
+</node>
+<node id="14">
+<index>11</index>
+<type>host</type>
+<name>h11</name>
+<ip>10.0.11.1</ip>
+<x>562</x>
+<y>136</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:0B</mac>
+</node>
+<node id="15">
+<index>12</index>
+<type>host</type>
+<name>h12</name>
+<ip>10.0.12.1</ip>
+<x>478</x>
+<y>123</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:0C</mac>
+</node>
+<node id="16">
+<index>3</index>
+<type>switch</type>
+<name>s3</name>
+<ip>192.168.56.130</ip>
+<x>173</x>
+<y>36</y>
+<dpid>00:00:00:00:00:00:00:03</dpid>
+<secure>0</secure>
+</node>
+<node id="17">
+<index>4</index>
+<type>switch</type>
+<name>s4</name>
+<ip>192.168.56.130</ip>
+<x>176</x>
+<y>209</y>
+<dpid>00:00:00:00:00:00:00:04</dpid>
+</node>
+<node id="20">
+<index>13</index>
+<type>host</type>
+<name>h13</name>
+<ip>10.0.13.1</ip>
+<x>53</x>
+<y>-38</y>
+<mac>00:00:00:00:00:0D</mac>
+</node>
+<node id="21">
+<index>14</index>
+<type>host</type>
+<name>h14</name>
+<ip>10.0.14.1</ip>
+<x>121</x>
+<y>-107</y>
+<mac>00:00:00:00:00:0E</mac>
+</node>
+<node id="22">
+<index>15</index>
+<type>host</type>
+<name>h15</name>
+<ip>10.0.15.1</ip>
+<x>213</x>
+<y>-110</y>
+<mac>00:00:00:00:00:0F</mac>
+</node>
+<node id="23">
+<index>16</index>
+<type>host</type>
+<name>h16</name>
+<ip>10.0.16.1</ip>
+<x>289</x>
+<y>-44</y>
+<mac>00:00:00:00:00:10</mac>
+</node>
+<node id="24">
+<index>17</index>
+<type>host</type>
+<name>h17</name>
+<ip>10.0.17.1</ip>
+<x>61</x>
+<y>269</y>
+<mac>00:00:00:00:00:11</mac>
+</node>
+<node id="25">
+<index>18</index>
+<type>host</type>
+<name>h18</name>
+<ip>10.0.18.1</ip>
+<x>127</x>
+<y>336</y>
+<mac>00:00:00:00:00:12</mac>
+</node>
+<node id="26">
+<index>19</index>
+<type>host</type>
+<name>h19</name>
+<ip>10.0.19.1</ip>
+<x>230</x>
+<y>339</y>
+<mac>00:00:00:00:00:13</mac>
+</node>
+<node id="27">
+<index>20</index>
+<type>host</type>
+<name>h20</name>
+<ip>10.0.20.1</ip>
+<x>288</x>
+<y>277</y>
+<mac>00:00:00:00:00:14</mac>
+</node>
+<node id="28">
+<index>5</index>
+<type>switch</type>
+<name>s5</name>
+<ip>192.168.56.130</ip>
+<x>-335</x>
+<y>205</y>
+<cloud>1</cloud>
+<dpid>00:00:00:00:00:00:00:05</dpid>
+</node>
+<node id="29">
+<index>6</index>
+<type>switch</type>
+<name>s6</name>
+<ip>192.168.56.130</ip>
+<x>678</x>
+<y>209</y>
+<cloud>2</cloud>
+<dpid>00:00:00:00:00:00:00:06</dpid>
+<secure>2</secure>
+</node>
+<node id="30">
+<index>21</index>
+<type>host</type>
+<name>h21</name>
+<ip>10.0.21.1</ip>
+<x>-467</x>
+<y>155</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:15</mac>
+</node>
+<node id="31">
+<index>22</index>
+<type>host</type>
+<name>h22</name>
+<ip>10.0.22.1</ip>
+<x>-473</x>
+<y>266</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:16</mac>
+</node>
+<node id="32">
+<index>23</index>
+<type>host</type>
+<name>h23</name>
+<ip>10.0.23.1</ip>
+<x>-392</x>
+<y>338</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:17</mac>
+</node>
+<node id="33">
+<index>24</index>
+<type>host</type>
+<name>h24</name>
+<ip>10.0.24.1</ip>
+<x>-276</x>
+<y>329</y>
+<cloud>1</cloud>
+<mac>00:00:00:00:00:18</mac>
+</node>
+<node id="34">
+<index>25</index>
+<type>host</type>
+<name>h25</name>
+<ip>10.0.25.1</ip>
+<x>578</x>
+<y>302</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:19</mac>
+</node>
+<node id="35">
+<index>26</index>
+<type>host</type>
+<name>h26</name>
+<ip>10.0.26.1</ip>
+<x>693</x>
+<y>349</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:1A</mac>
+</node>
+<node id="36">
+<index>27</index>
+<type>host</type>
+<name>h27</name>
+<ip>10.0.27.1</ip>
+<x>795</x>
+<y>287</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:1B</mac>
+</node>
+<node id="37">
+<index>28</index>
+<type>host</type>
+<name>h28</name>
+<ip>10.0.28.1</ip>
+<x>800</x>
+<y>159</y>
+<cloud>2</cloud>
+<mac>00:00:00:00:00:1C</mac>
+</node>
+<link id="1">
+<from>2</from>
+<to>3</to>
+<band>100</band>
+</link>
+<link id="2">
+<from>2</from>
+<to>4</to>
+<band>100</band>
+</link>
+<link id="3">
+<from>2</from>
+<to>5</to>
+<band>100</band>
+</link>
+<link id="4">
+<from>2</from>
+<to>6</to>
+<band>100</band>
+</link>
+<link id="5">
+<from>2</from>
+<to>7</to>
+<band>100</band>
+</link>
+<link id="6">
+<from>2</from>
+<to>8</to>
+<band>100</band>
+</link>
+<link id="7">
+<from>9</from>
+<to>10</to>
+<band>100</band>
+</link>
+<link id="8">
+<from>9</from>
+<to>11</to>
+<band>100</band>
+</link>
+<link id="9">
+<from>9</from>
+<to>12</to>
+<band>100</band>
+</link>
+<link id="10">
+<from>9</from>
+<to>13</to>
+<band>100</band>
+</link>
+<link id="11">
+<from>9</from>
+<to>14</to>
+<band>100</band>
+</link>
+<link id="12">
+<from>9</from>
+<to>15</to>
+<band>100</band>
+</link>
+<link id="13">
+<from>2</from>
+<to>16</to>
+<band>100</band>
+</link>
+<link id="14">
+<from>16</from>
+<to>9</to>
+<band>100</band>
+</link>
+<link id="15">
+<from>16</from>
+<to>17</to>
+<band>100</band>
+</link>
+<link id="16">
+<from>20</from>
+<to>16</to>
+<band>100</band>
+</link>
+<link id="17">
+<from>21</from>
+<to>16</to>
+<band>100</band>
+</link>
+<link id="18">
+<from>22</from>
+<to>16</to>
+<band>100</band>
+</link>
+<link id="19">
+<from>23</from>
+<to>16</to>
+<band>100</band>
+</link>
+<link id="20">
+<from>24</from>
+<to>17</to>
+<band>100</band>
+</link>
+<link id="21">
+<from>25</from>
+<to>17</to>
+<band>100</band>
+</link>
+<link id="22">
+<from>26</from>
+<to>17</to>
+<band>100</band>
+</link>
+<link id="23">
+<from>27</from>
+<to>17</to>
+<band>100</band>
+</link>
+<link id="24">
+<from>28</from>
+<to>2</to>
+<band>100</band>
+</link>
+<link id="25">
+<from>9</from>
+<to>29</to>
+<band>100</band>
+</link>
+<link id="26">
+<from>30</from>
+<to>28</to>
+<band>100</band>
+</link>
+<link id="27">
+<from>31</from>
+<to>28</to>
+<band>100</band>
+</link>
+<link id="28">
+<from>32</from>
+<to>28</to>
+<band>100</band>
+</link>
+<link id="29">
+<from>33</from>
+<to>28</to>
+<band>100</band>
+</link>
+<link id="30">
+<from>34</from>
+<to>29</to>
+<band>100</band>
+</link>
+<link id="31">
+<from>35</from>
+<to>29</to>
+<band>100</band>
+</link>
+<link id="32">
+<from>36</from>
+<to>29</to>
+<band>100</band>
+</link>
+<link id="33">
+<from>37</from>
+<to>29</to>
+<band>100</band>
+</link>
+<link id="34">
+<from>17</from>
+<to>28</to>
+<band>100</band>
+</link>
+<link id="35">
+<from>17</from>
+<to>9</to>
+<band>100</band>
+</link>
+<link id="36">
+<from>2</from>
+<to>29</to>
+<band>100</band>
+</link>
+</config>

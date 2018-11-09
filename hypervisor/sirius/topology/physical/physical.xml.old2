@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<cloud id="1">
+<name>Navsete</name>
+<provider>FCUL</provider>
+<username>sirius</username>
+</cloud>
+<cloud id="2">
+<name>EC2</name>
+<provider>Amazon</provider>
+<username>ubuntu</username>
+<identity>AKIAI7ELXAY6CYI4SF3A</identity>
+<credential>3JPHkxqnXMl0pu/VK7lMqevNq97Fd7vpkvyFCOsH</credential>
+</cloud>
+<vm id="1">
+<name>front-end</name>
+<cid>1</cid>
+<location>Portugal</location>
+<public-ip>194.117.20.241</public-ip>
+<private-ip>172.17.0.1</private-ip>
+<gateway>true</gateway>
+<deployed>true</deployed>
+</vm>
+<vm id="2">
+<name>amazon1</name>
+<pid>eu-central-1/i-07868fd8c1499cb1d</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>54.93.187.40</public-ip>
+<private-ip>172.31.20.69</private-ip>
+<gateway>true</gateway>
+<deployed>true</deployed>
+</vm>
+<vm id="3">
+<name>amazon2</name>
+<pid>eu-central-1/i-0d9c7becc179f588a</pid>
+<cid>2</cid>
+<location>nc</location>
+<public-ip>54.93.188.230</public-ip>
+<private-ip>172.31.25.11</private-ip>
+<deployed>true</deployed>
+</vm>
+<node id="1">
+<type>controller</type>
+<index>1</index>
+<name>controller</name>
+<vid>1</vid>
+<deployed>true</deployed>
+<ip>127.0.0.1</ip>
+<port>5563</port>
+</node>
+<node id="2">
+<type>switch</type>
+<index>1</index>
+<name>ovs1</name>
+<vid>1</vid>
+<deployed>true</deployed>
+<openflow>3</openflow>
+<cpu>100</cpu>
+</node>
+<node id="3">
+<type>host</type>
+<index>1</index>
+<name>container1</name>
+<vid>1</vid>
+<deployed>true</deployed>
+<ip>10.0.190.1</ip>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<node id="4">
+<type>host</type>
+<index>2</index>
+<name>container2</name>
+<vid>1</vid>
+<deployed>true</deployed>
+<ip>10.0.190.2</ip>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<node id="5">
+<type>switch</type>
+<index>2</index>
+<name>ovs2</name>
+<vid>2</vid>
+<deployed>true</deployed>
+<openflow>3</openflow>
+<cpu>100</cpu>
+</node>
+<node id="6">
+<type>host</type>
+<index>3</index>
+<name>container3</name>
+<vid>2</vid>
+<deployed>true</deployed>
+<ip>10.0.190.3</ip>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<node id="7">
+<type>host</type>
+<index>4</index>
+<name>container4</name>
+<vid>2</vid>
+<deployed>true</deployed>
+<ip>10.0.190.4</ip>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<node id="8">
+<type>switch</type>
+<index>3</index>
+<name>ovs3</name>
+<vid>3</vid>
+<deployed>true</deployed>
+<openflow>3</openflow>
+<cpu>100</cpu>
+</node>
+<node id="9">
+<type>host</type>
+<index>5</index>
+<name>container5</name>
+<vid>3</vid>
+<deployed>true</deployed>
+<ip>10.0.190.5</ip>
+<tenant>1</tenant>
+<cpu>100</cpu>
+</node>
+<link id="1">
+<from>1</from>
+<to>2</to>
+</link>
+<link id="2">
+<from>2</from>
+<to>3</to>
+</link>
+<link id="3">
+<from>2</from>
+<to>4</to>
+</link>
+<link id="4">
+<from>2</from>
+<to>5</to>
+</link>
+<link id="5">
+<from>5</from>
+<to>6</to>
+</link>
+<link id="6">
+<from>7</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="7">
+<from>5</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="8">
+<from>9</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+</link>
+</config>

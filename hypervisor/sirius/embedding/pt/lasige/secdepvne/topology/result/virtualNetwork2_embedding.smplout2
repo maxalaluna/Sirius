@@ -1,0 +1,8 @@
+Working node of 5 -> B
+Working node of 6 -> E
+Backup node of 5 -> F
+Backup node of 6 -> A
+Working links for (5,6) -> (B,D) (D,E) 
+Working path for (5,6) -> B D E 
+Backup links for (5,6) -> (F,A) 
+Backup path for (5,6) -> F A 

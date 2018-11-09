@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<node id="1">
+<index>1</index>
+<type>host</type>
+<name>h1</name>
+<ip>10.0.0.1</ip>
+<x>-332</x>
+<y>81</y>
+<tenant>1</tenant>
+<map>10</map>
+<mac>00:00:00:00:00:01</mac>
+</node>
+<node id="2">
+<index>2</index>
+<type>host</type>
+<name>h2</name>
+<ip>10.0.0.2</ip>
+<x>-323</x>
+<y>-106</y>
+<tenant>1</tenant>
+<map>11</map>
+<mac>00:00:00:00:00:02</mac>
+</node>
+<node id="3">
+<index>3</index>
+<type>host</type>
+<name>h3</name>
+<ip>10.0.0.3</ip>
+<x>26</x>
+<y>-100</y>
+<tenant>1</tenant>
+<map>30</map>
+<mac>00:00:00:00:00:03</mac>
+</node>
+<node id="4">
+<index>4</index>
+<type>host</type>
+<name>h4</name>
+<ip>10.0.0.4</ip>
+<x>30</x>
+<y>83</y>
+<tenant>1</tenant>
+<map>31</map>
+<mac>00:00:00:00:00:04</mac>
+</node>
+<node id="5">
+<index>1</index>
+<type>switch</type>
+<name>s1</name>
+<ip>192.168.213.130</ip>
+<x>-215</x>
+<y>-7</y>
+<cloud>1</cloud>
+<cpu>20</cpu>
+<tenant>1</tenant>
+<map>9</map>
+<depend>2</depend>
+</node>
+<node id="6">
+<index>2</index>
+<type>switch</type>
+<name>s2</name>
+<ip>192.168.213.130</ip>
+<x>-86</x>
+<y>-8</y>
+<cpu>20</cpu>
+<tenant>1</tenant>
+<map>28</map>
+<depend>2</depend>
+<trust>0</trust>
+</node>
+<node id="7">
+<index>1</index>
+<type>host</type>
+<name>h1</name>
+<ip>10.0.0.1</ip>
+<x>-166</x>
+<y>-164</y>
+<tenant>2</tenant>
+<map>32</map>
+<mac>00:00:00:00:00:01</mac>
+</node>
+<node id="8">
+<index>2</index>
+<type>host</type>
+<name>h2</name>
+<ip>10.0.0.2</ip>
+<x>-378</x>
+<y>44</y>
+<tenant>2</tenant>
+<map>12</map>
+<mac>00:00:00:00:00:02</mac>
+</node>
+<node id="9">
+<index>3</index>
+<type>host</type>
+<name>h3</name>
+<ip>10.0.0.3</ip>
+<x>65</x>
+<y>-65</y>
+<tenant>2</tenant>
+<map>24</map>
+<mac>00:00:00:00:00:03</mac>
+</node>
+<node id="10">
+<index>4</index>
+<type>host</type>
+<name>h4</name>
+<ip>10.0.0.4</ip>
+<x>68</x>
+<y>155</y>
+<tenant>2</tenant>
+<map>25</map>
+<mac>00:00:00:00:00:04</mac>
+</node>
+<node id="11">
+<index>1</index>
+<type>switch</type>
+<name>s1</name>
+<ip>192.168.213.130</ip>
+<x>-165</x>
+<y>-62</y>
+<cpu>20</cpu>
+<tenant>2</tenant>
+<map>28</map>
+<depend>2</depend>
+<trust>0</trust>
+</node>
+<node id="12">
+<index>-1</index>
+<type>switch</type>
+<name>s2</name>
+<ip>192.168.213.130</ip>
+<x>-263</x>
+<y>45</y>
+<cloud>1</cloud>
+<cpu>20</cpu>
+<tenant>2</tenant>
+<map>9</map>
+<version>-1</version>
+<depend>2</depend>
+</node>
+<node id="13">
+<index>3</index>
+<type>switch</type>
+<name>s3</name>
+<ip>192.168.213.130</ip>
+<x>-62</x>
+<y>49</y>
+<cpu>20</cpu>
+<tenant>2</tenant>
+<map>17</map>
+<secure>0</secure>
+<depend>2</depend>
+<trust>0</trust>
+</node>
+<link id="1">
+<from>1</from>
+<to>5</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>7</route>
+</link>
+<link id="2">
+<from>2</from>
+<to>5</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>8</route>
+</link>
+<link id="3">
+<from>3</from>
+<to>6</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>26</route>
+</link>
+<link id="4">
+<from>4</from>
+<to>6</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>27</route>
+</link>
+<link id="5">
+<from>5</from>
+<to>6</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>35:34</route>
+</link>
+<link id="6">
+<from>7</from>
+<to>11</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>28</route>
+</link>
+<link id="7">
+<from>8</from>
+<to>12</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>9</route>
+</link>
+<link id="8">
+<from>9</from>
+<to>13</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>20</route>
+</link>
+<link id="9">
+<from>10</from>
+<to>13</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>21</route>
+</link>
+<link id="10">
+<from>11</from>
+<to>12</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<route>34:35</route>
+</link>
+<link id="11">
+<from>11</from>
+<to>13</to>
+<delay>-1</delay>
+<loss>-1</loss>
+<secure>0</secure>
+<route>34</route>
+</link>
+</config>

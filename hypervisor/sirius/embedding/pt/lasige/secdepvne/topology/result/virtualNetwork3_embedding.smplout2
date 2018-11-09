@@ -1,0 +1,18 @@
+Working node of 11 -> A
+Working node of 12 -> F
+Working node of 13 -> C
+Backup node of 11 -> E
+Backup node of 12 -> B
+Backup node of 13 -> D
+Working links for (11,12) -> (A,F) 
+Working path for (11,12) -> A F 
+Working links for (11,13) -> (A,C) 
+Working path for (11,13) -> A C 
+Working links for (12,13) -> (F,A) (A,C) 
+Working path for (12,13) -> F A C 
+Backup links for (11,12) -> (E,D) (D,B) 
+Backup path for (11,12) -> E D B 
+Backup links for (11,13) -> (E,D) 
+Backup path for (11,13) -> E D 
+Backup links for (12,13) -> (B,D) 
+Backup path for (12,13) -> B D 

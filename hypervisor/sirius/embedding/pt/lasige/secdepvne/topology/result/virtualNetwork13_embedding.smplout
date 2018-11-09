@@ -1,0 +1,13 @@
+Working node of 1 -> A
+Working node of 2 -> L
+Working node of 4 -> N
+Working node of 6 -> D
+Working node of 9 -> B
+Working links for (1,9) -> (A,B) 
+Working path for (1,9) -> A B 
+Working links for (1,4) -> (A,N) 
+Working path for (1,4) -> A N 
+Working links for (1,6) -> (A,D) 
+Working path for (1,6) -> A D 
+Working links for (1,2) -> (A,L) 
+Working path for (1,2) -> A L 

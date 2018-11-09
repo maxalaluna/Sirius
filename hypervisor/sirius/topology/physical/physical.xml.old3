@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config id="0">
+<image>
+<name>host</name>
+<script>docker run -dit --name %NAME% --hostname %NAME% --net=none host bash</script>
+</image>
+<image>
+<name>clinidata_pg</name>
+<script>docker run -dit --name %NAME% --hostname %NAME% --net=none -p 5432:5432 clinidata_pg</script>
+<script>sleep 10</script>
+<script>docker exec %NAME% psql -f /tmp/clinidata_20170113.dump postgres -U postgres</script>
+</image>
+<image>
+<name>clinidata_tc</name>
+<script>docker run -it --name %NAME% --hostname %NAME% --add-host="clinidata_pg:10.0.0.1" -p 8585:8585 -d clinidata_tc</script>
+</image>
+<cloud id="1">
+<name>navsete</name>
+<provider>fcul</provider>
+<username>sirius</username>
+<security>2</security>
+<key>fcul</key>
+</cloud>
+<cloud id="2">
+<name>ec2</name>
+<provider>amazon</provider>
+<username>ubuntu</username>
+<identity>AKIAI7ELXAY6CYI4SF3A</identity>
+<credential>3JPHkxqnXMl0pu/VK7lMqevNq97Fd7vpkvyFCOsH</credential>
+<security>1</security>
+<key>amazon</key>
+</cloud>
+<vm id="1">
+<name>front-end</name>
+<cid>1</cid>
+<location>Portugal</location>
+<public-ip>194.117.20.241</public-ip>
+<private-ip>194.117.20.241</private-ip>
+<tunnel-ip>10.8.0.1</tunnel-ip>
+<gateway>true</gateway>
+<deployed>true</deployed>
+</vm>
+<vm id="2">
+<name>amazon1</name>
+<pid>eu-central-1/i-09ed62fa0db1c2a4f</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>54.93.38.159</public-ip>
+<private-ip>172.31.18.9</private-ip>
+<tunnel-ip>10.8.0.18</tunnel-ip>
+<gateway>true</gateway>
+<deployed>true</deployed>
+</vm>
+<vm id="3">
+<name>amazon2</name>
+<pid>eu-central-1/i-052ffb285bae3fe77</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>54.93.86.196</public-ip>
+<private-ip>172.31.29.164</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="6">
+<name>amazon4</name>
+<pid>eu-central-1/i-08e0b75d1c1229179</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>54.93.95.184</public-ip>
+<private-ip>172.31.26.100</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="7">
+<name>amazon3</name>
+<pid>eu-central-1/i-07868fd8c1499cb1d</pid>
+<cid>2</cid>
+<location>eu-central-1b</location>
+<public-ip>54.93.199.176</public-ip>
+<private-ip>172.31.20.69</private-ip>
+<deployed>true</deployed>
+</vm>
+<node id="1">
+<type>controller</type>
+<index>1</index>
+<name>controller</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<ip>192.168.56.130</ip>
+<port>5563</port>
+</node>
+<node id="2">
+<type>switch</type>
+<index>1</index>
+<name>ovs1</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<openflow>3</openflow>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="5">
+<type>switch</type>
+<index>2</index>
+<name>ovs2</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<openflow>3</openflow>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="8">
+<type>switch</type>
+<index>3</index>
+<name>ovs3</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<openflow>3</openflow>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="14">
+<type>switch</type>
+<index>6</index>
+<name>ovs6</name>
+<deployed>true</deployed>
+<vid>6</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="15">
+<type>switch</type>
+<index>7</index>
+<name>ovs7</name>
+<deployed>true</deployed>
+<vid>7</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="3">
+<type>host</type>
+<index>1</index>
+<name>container1</name>
+<deployed>true</deployed>
+<vid>7</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="4">
+<type>host</type>
+<index>2</index>
+<name>container2</name>
+<deployed>true</deployed>
+<vid>7</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="6">
+<type>host</type>
+<index>3</index>
+<name>container3</name>
+<deployed>true</deployed>
+<vid>7</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="7">
+<type>host</type>
+<index>4</index>
+<name>container4</name>
+<deployed>true</deployed>
+<vid>7</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="9">
+<type>host</type>
+<index>5</index>
+<name>container5</name>
+<deployed>true</deployed>
+<vid>6</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="10">
+<type>host</type>
+<index>6</index>
+<name>container6</name>
+<deployed>true</deployed>
+<vid>6</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="11">
+<type>host</type>
+<index>7</index>
+<name>container7</name>
+<deployed>true</deployed>
+<vid>6</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="12">
+<type>host</type>
+<index>8</index>
+<name>container8</name>
+<deployed>true</deployed>
+<vid>6</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="13">
+<type>host</type>
+<index>9</index>
+<name>container9</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="16">
+<type>host</type>
+<index>10</index>
+<name>container10</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="17">
+<type>host</type>
+<index>11</index>
+<name>container11</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="18">
+<type>host</type>
+<index>12</index>
+<name>container12</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="19">
+<type>host</type>
+<index>13</index>
+<name>container13</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="20">
+<type>host</type>
+<index>14</index>
+<name>container14</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="21">
+<type>host</type>
+<index>15</index>
+<name>container15</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="22">
+<type>host</type>
+<index>16</index>
+<name>container16</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="23">
+<type>host</type>
+<index>17</index>
+<name>container17</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="24">
+<type>host</type>
+<index>18</index>
+<name>container18</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="25">
+<type>host</type>
+<index>19</index>
+<name>container19</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="27">
+<type>host</type>
+<index>21</index>
+<name>container21</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<link id="1">
+<from>1</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="4">
+<from>2</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+<deployed>true</deployed>
+</link>
+<link id="7">
+<from>5</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+<deployed>true</deployed>
+</link>
+<link id="13">
+<from>14</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+<deployed>true</deployed>
+</link>
+<link id="14">
+<from>15</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+<deployed>true</deployed>
+</link>
+<link id="2">
+<from>3</from>
+<to>15</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="3">
+<from>4</from>
+<to>15</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="5">
+<from>6</from>
+<to>15</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="6">
+<from>7</from>
+<to>15</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="8">
+<from>9</from>
+<to>14</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="9">
+<from>10</from>
+<to>14</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="10">
+<from>11</from>
+<to>14</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="11">
+<from>12</from>
+<to>14</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="12">
+<from>13</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="15">
+<from>16</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="16">
+<from>17</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="17">
+<from>18</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="18">
+<from>19</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="19">
+<from>20</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="20">
+<from>21</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="21">
+<from>22</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="22">
+<from>23</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="23">
+<from>24</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="24">
+<from>25</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="26">
+<from>27</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+</link>
+</config>

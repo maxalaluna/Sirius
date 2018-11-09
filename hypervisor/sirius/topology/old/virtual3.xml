@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<node id="23">
+<index>16</index>
+<type>host</type>
+<name>h16</name>
+<ip>10.0.16.1</ip>
+<tenant>1</tenant>
+</node>
+<node id="7">
+<index>5</index>
+<type>host</type>
+<name>h5</name>
+<ip>10.0.5.1</ip>
+<cloud>1</cloud>
+<tenant>1</tenant>
+</node>
+<node id="12">
+<index>9</index>
+<type>host</type>
+<name>h9</name>
+<ip>10.0.9.1</ip>
+<cloud>2</cloud>
+<tenant>1</tenant>
+</node>
+<node id="24">
+<index>1</index>
+<type>switch</type>
+<name>v1</name>
+<ip>127.0.0.1</ip>
+<version>0</version>
+<tenant>1</tenant>
+</node>
+<node id="25">
+<index>2</index>
+<type>switch</type>
+<name>v2</name>
+<ip>127.0.0.1</ip>
+<version>0</version>
+<cloud>1</cloud>
+<tenant>1</tenant>
+</node>
+<node id="26">
+<index>3</index>
+<type>switch</type>
+<name>v3</name>
+<ip>127.0.0.1</ip>
+<version>0</version>
+<cloud>2</cloud>
+<tenant>1</tenant>
+</node>
+<node id="22">
+<index>15</index>
+<type>host</type>
+<name>h15</name>
+<ip>10.0.15.1</ip>
+<tenant>2</tenant>
+</node>
+<node id="4">
+<index>2</index>
+<type>host</type>
+<name>h2</name>
+<ip>10.0.2.1</ip>
+<cloud>1</cloud>
+<tenant>2</tenant>
+</node>
+<node id="27">
+<index>4</index>
+<type>switch</type>
+<name>v4</name>
+<ip>127.0.0.1</ip>
+<version>0</version>
+<tenant>2</tenant>
+</node>
+<node id="28">
+<index>5</index>
+<type>switch</type>
+<name>v5</name>
+<ip>127.0.0.1</ip>
+<version>0</version>
+<cloud>1</cloud>
+<tenant>2</tenant>
+</node>
+<node id="20">
+<index>13</index>
+<type>host</type>
+<name>h13</name>
+<ip>10.0.13.1</ip>
+<tenant>3</tenant>
+</node>
+<node id="10">
+<index>7</index>
+<type>host</type>
+<name>h7</name>
+<ip>10.0.7.1</ip>
+<cloud>2</cloud>
+<tenant>3</tenant>
+</node>
+<node id="29">
+<index>6</index>
+<type>switch</type>
+<name>v6</name>
+<ip>127.0.0.1</ip>
+<version>0</version>
+<tenant>3</tenant>
+</node>
+<node id="30">
+<index>7</index>
+<type>switch</type>
+<name>v7</name>
+<ip>127.0.0.1</ip>
+<version>0</version>
+<cloud>2</cloud>
+<tenant>3</tenant>
+</node>
+<link>
+<from>23</from>
+<to>24</to>
+</link>
+<link>
+<from>7</from>
+<to>25</to>
+</link>
+<link>
+<from>12</from>
+<to>26</to>
+</link>
+<link>
+<from>24</from>
+<to>25</to>
+</link>
+<link>
+<from>24</from>
+<to>26</to>
+</link>
+<link>
+<from>25</from>
+<to>26</to>
+</link>
+<link>
+<from>22</from>
+<to>27</to>
+</link>
+<link>
+<from>4</from>
+<to>28</to>
+</link>
+<link>
+<from>27</from>
+<to>28</to>
+</link>
+<link>
+<from>20</from>
+<to>29</to>
+</link>
+<link>
+<from>10</from>
+<to>30</to>
+</link>
+<link>
+<from>29</from>
+<to>30</to>
+</link>
+</config>

@@ -1,0 +1,312 @@
+package net.floodlightcontroller.sirius.console;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class Network {
+
+	private ArrayList<Cloud> clouds;
+	private ArrayList<Node> nodes;
+	private ArrayList<Link> links;
+	private ArrayList<Vm> vms;
+	private boolean changed;
+	private int id;
+	
+	public Network() {
+		clouds = new ArrayList<>();
+		vms = new ArrayList<>();
+		nodes = new ArrayList<>();
+		links = new ArrayList<>();
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public ArrayList<Cloud> getClouds() {
+		return clouds;
+	}
+	
+	public ArrayList<Vm> getVMs() {
+		return vms;
+	}
+	
+	public ArrayList<Node> getNodes() {
+		return nodes;
+	}
+	
+	public ArrayList<Link> getLinks() {
+		return links;
+	}
+	
+	public boolean isChanged() {
+		return changed;
+	}
+
+	public void setChanged(boolean changed) {
+		this.changed = changed;
+	}
+
+	public void clear() {
+		clouds.clear();
+		vms.clear();
+		nodes.clear();
+		links.clear();
+	}
+	
+	public void readXML(String path) throws IOException, ParserConfigurationException, SAXException {
+		Console.log("Reading topology from '" + path + "'");
+		InputStream is = new FileInputStream(path);
+		readDocument(Config.loadDocument(is));
+		is.close();
+	}
+    
+	public void writeXML(String path) throws FileNotFoundException, TransformerException {
+		Document doc = writeDocument();
+		OutputStream os = new FileOutputStream(path);
+		StreamResult result = new StreamResult(os);
+		Console.log("Writing topology into '" + path + "'");
+		Config.saveDocument(doc, result);
+	}
+	
+	public void removeAllLinksFromNode(Node node) {
+		int k = 0;
+		while (k < links.size()) {
+			Link link = links.get(k);
+			if (link.getFrom() == node 
+					|| link.getTo() == node)
+				links.remove(k);
+			else k++;
+		}
+	}
+	
+	public void removeAllNodesFromVM(Vm vm) {
+		int k = 0;
+		while (k < nodes.size()) {
+			Node node = nodes.get(k);
+			if (node.getVm() == vm) {
+				Console.log("Removing " + node.getType() + " " + node.getName());
+				removeAllLinksFromNode(node);
+				nodes.remove(k);
+			}
+			else k++;
+		}
+	}
+	
+	public void readDocument(Document doc) {
+		Element root = doc.getDocumentElement();
+		setId(Integer.parseInt(root.getAttribute("id")));
+		
+		// Read cloud elements
+    	NodeList nodeLst = doc.getElementsByTagName("cloud");
+    	for (int k = 0; k < nodeLst.getLength(); k++) {
+    		Element elem = (Element)nodeLst.item(k);
+    		int id = Integer.parseInt(elem.getAttribute("id"));
+    		String name = Config.readXMLString(elem, "name");
+    		String provider = Config.readXMLString(elem, "provider");
+    		String username = Config.readXMLString(elem, "username");
+    		String identity = Config.readXMLString(elem, "identity");
+    		String credential = Config.readXMLString(elem, "credential");
+    		int security = Config.readXMLInteger(elem, "security");
+    		clouds.add(new Cloud(id, name, provider, username, 
+    				identity, credential, security));
+    	}
+    	Console.log("Total clouds: " + nodeLst.getLength());
+    	
+    	// Read vm elements
+    	nodeLst = doc.getElementsByTagName("vm");
+    	for (int k = 0; k < nodeLst.getLength(); k++) {
+    		Element elem = (Element)nodeLst.item(k);
+    		int id = Integer.parseInt(elem.getAttribute("id"));
+    		String name = Config.readXMLString(elem, "name");
+    		String pid = Config.readXMLString(elem, "pid");
+    		int cid = Config.readXMLInteger(elem, "cid");
+    		String location = Config.readXMLString(elem, "location");
+    		String publicIp = Config.readXMLString(elem, "public-ip");
+    		String privateIp = Config.readXMLString(elem, "private-ip");
+    		boolean gateway = Config.readXMLBoolean(elem, "gateway");
+    		boolean deployed = Config.readXMLBoolean(elem, "deployed");
+    		Cloud cloud = Cloud.findFromId(this, cid);
+    		vms.add(new Vm(id, name, pid, cloud, location, 
+    				publicIp, privateIp, gateway, deployed));
+    	}
+    	Console.log("Total vms: " + nodeLst.getLength());
+    	
+		// Read node elements
+    	nodeLst = doc.getElementsByTagName("node");
+    	for (int k = 0; k < nodeLst.getLength(); k++) {
+    		Element elem = (Element)nodeLst.item(k);
+    		String type = Config.readXMLString(elem, "type");
+    		int id = Integer.parseInt(elem.getAttribute("id"));
+    		int index = Config.readXMLInteger(elem, "index");
+    		String name = Config.readXMLString(elem, "name");
+    		int vid = Config.readXMLInteger(elem, "vid"); 
+    		boolean deployed = Config.readXMLBoolean(elem, "deployed");
+    		Vm vm = Vm.findFromId(this, vid);
+    		
+    		// Hosts
+    		if (type.equals("host"))  {
+    			String ip = Config.readXMLString(elem, "ip");
+    			String mac = Config.readXMLString(elem, "mac");
+    			int cpu = Config.readXMLInteger(elem, "cpu");
+    			int tenant = Config.readXMLInteger(elem, "tenant");
+    			int mapping = Config.readXMLInteger(elem, "mapping");
+	    		nodes.add(new Host(id, index, name, vm, deployed, ip, 
+	    				mac, cpu, tenant, mapping));
+    		}
+    		
+    		// Switches
+    		else if (type.equals("switch")) {
+    			int openflow = Config.readXMLInteger(elem, "openflow");
+    			String dpid = Config.readXMLString(elem, "dpid");
+    			String bridge = Config.readXMLString(elem, "bridge");
+    			int security = Config.readXMLInteger(elem, "security");
+    			int dependability = Config.readXMLInteger(elem, "dependability");
+    			int flows = Config.readXMLInteger(elem, "flows");
+    			int cpu = Config.readXMLInteger(elem, "cpu");
+    			int tenant = Config.readXMLInteger(elem, "tenant");
+    			int mapping = Config.readXMLInteger(elem, "mapping");
+    			nodes.add(new Switch(id, index, name, vm, deployed, openflow, dpid, bridge, 
+    					security, dependability, flows, cpu, tenant, mapping));
+    		}
+    		
+    		// Controller
+    		else if (type.equals("controller")) {
+    			String ip = Config.readXMLString(elem, "ip"); 
+    			int port = Config.readXMLInteger(elem, "port");
+    			nodes.add(new Controller(id, index, name, vm, deployed, ip, port));
+    		}
+    	}
+    	Console.log("Total nodes: " + nodeLst.getLength());
+    	
+    	// Read link elements
+    	nodeLst = doc.getElementsByTagName("link");
+    	for (int k = 0; k < nodeLst.getLength(); k++) {
+    		Element elem = (Element)nodeLst.item(k);
+    		int id = Integer.parseInt(elem.getAttribute("id"));
+    		int from = Config.readXMLInteger(elem, "from");
+    		int to = Config.readXMLInteger(elem, "to");
+    		int bandwidth = Config.readXMLInteger(elem, "bandwidth");
+    		int delay = Config.readXMLInteger(elem, "delay");
+    		int lossRate = Config.readXMLInteger(elem, "loss-rate");
+    		int security = Config.readXMLInteger(elem, "security");
+    		String route = Config.readXMLString(elem, "route");
+    		Node node1 = Node.findFromId(this, from);
+    		Node node2 = Node.findFromId(this, to);
+    		links.add(new Link(id, node1, node2, bandwidth, 
+    				delay, lossRate, security, route));
+    	}
+    	Console.log("Total links: " + nodeLst.getLength());
+	}
+	
+	public Document writeDocument() {
+		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder docBuilder = null;
+		Document doc = null;
+		try {
+			docBuilder = docFactory.newDocumentBuilder();
+
+			// Root elements
+			doc = docBuilder.newDocument();
+			Element root = doc.createElement("config");
+			root.setAttribute("id", Integer.toString(getId()));
+			doc.appendChild(root);
+					
+			// Add cloud elements
+			for (Cloud cloud : clouds) {
+				Element aux = cloud.toXML(doc);
+				root.appendChild(aux);
+			}
+			
+			// Add VM elements
+			for (Vm vm : vms) {
+				Element aux = vm.toXML(doc);
+				root.appendChild(aux);
+			}
+			
+			// Add node elements
+			for (Node node : nodes) {
+				Element aux = node.toXML(doc);
+				root.appendChild(aux);
+			}
+			
+			// Add link elements
+			for (Link link : links) {
+				Element aux = link.toXML(doc);
+				root.appendChild(aux);
+			}
+		} 
+		catch (ParserConfigurationException ex) {
+			ex.printStackTrace();
+		}
+		return doc;		
+	}
+	
+	public Cloud addDefaultCloud() {
+		Console.log("Creating default cloud");
+		Cloud cloud = new Cloud(0, "default", 
+				"nc", "nc", "nc", "nc", 0);
+		clouds.add(cloud);
+		return cloud;
+	}
+
+	public Vm addDefaultVm(Config config, Cloud cloud) {
+		int id = Vm.newId(this);
+		Console.log("Creating default vm id " + id);
+		Vm vm = new Vm(id, "vm" + id, "nc", cloud, "nc", 
+				config.defaultPublicIp, config.defaultPrivateIp, 
+				false, false);
+		vms.add(vm);
+		return vm;
+	}
+	
+	public Switch addDefaultSwitch(Config config, Vm vm, int tenant) {
+		int id = Switch.newId(this);
+		int index = Switch.newIndex(this);
+		Console.log("Creating default switch id " + id);
+		Switch node = new Switch(id, index, "s" + index, vm, false, 	
+				config.defaultOpenflowVersion, null, config.defaultBridgeName, 
+				0, 0, config.defaultMaxFlowSize, 100, tenant, 0);
+		nodes.add(node);
+		return node;
+	}
+	
+	public Host addDefaultHost(Config config, Vm vm, int tenant) {
+		int id = Host.newId(this);
+		int index = Host.newIndex(this);
+		Console.log("Creating default host id " + id);
+		String ip = Toolbox.createIP(config.defaultIpRange, index);
+		String mac = Toolbox.createMAC(config.defaultMacRange, index);
+		Host node = new Host(id, index, "h" + index, vm, false, 
+				ip, mac, 100, tenant, 0);
+		nodes.add(node);
+		return node;
+	}
+	
+	public Link addDefaultLink(Config config, Node from, Node to) {
+		int id = Link.newId(this);
+		Console.log("Creating default link id " + id);
+		Link link = new Link(id, from, to, config.defaultLinkBandwidth, 
+				config.defaultLinkDelay, config.defaultLinkLossRate, 0, null);
+		links.add(link);
+		return link;
+	}
+}

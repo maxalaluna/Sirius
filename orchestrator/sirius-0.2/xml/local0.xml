@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config id="0">
+<image>
+<name>host</name>
+<script>docker run -dit --name %NAME% --hostname %NAME% --net=none host bash</script>
+</image>
+<cloud id="1">
+<name>navsete</name>
+<provider>fcul</provider>
+<username>supercloud</username>
+<security>2</security>
+<deployed>true</deployed>
+<key>local</key>
+</cloud>
+<cloud id="2">
+<name>ec2</name>
+<provider>fcul</provider>
+<username>supercloud</username>
+<deployed>true</deployed>
+<key>local</key>
+</cloud>
+<vm id="1">
+<name>fcul1</name>
+<pid>none</pid>
+<cid>1</cid>
+<location>none</location>
+<public-ip>192.168.57.101</public-ip>
+<private-ip>192.168.57.101</private-ip>
+<tunnel-ip>192.168.57.101</tunnel-ip>
+<gateway>true</gateway>
+<deployed>true</deployed>
+</vm>
+<vm id="2">
+<name>amazon4</name>
+<pid>none</pid>
+<cid>2</cid>
+<location>none</location>
+<public-ip>192.168.57.102</public-ip>
+<private-ip>192.168.57.102</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="3">
+<name>amazon1</name>
+<pid>none</pid>
+<cid>2</cid>
+<location>none</location>
+<public-ip>192.168.57.103</public-ip>
+<private-ip>192.168.57.103</private-ip>
+<tunnel-ip>192.168.57.103</tunnel-ip>
+<gateway>true</gateway>
+<deployed>true</deployed>
+</vm>
+<vm id="4">
+<name>amazon2</name>
+<pid>none</pid>
+<cid>2</cid>
+<location>none</location>
+<public-ip>192.168.57.104</public-ip>
+<private-ip>192.168.57.104</private-ip>
+<deployed>true</deployed>
+</vm>
+<vm id="5">
+<name>amazon3</name>
+<pid>none</pid>
+<cid>2</cid>
+<location>none</location>
+<public-ip>192.168.57.105</public-ip>
+<private-ip>192.168.57.105</private-ip>
+<deployed>true</deployed>
+</vm>
+<node id="1">
+<type>switch</type>
+<index>1</index>
+<name>ovs1</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="2">
+<type>host</type>
+<index>1</index>
+<name>container1</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="3">
+<type>host</type>
+<index>2</index>
+<name>container2</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="4">
+<type>switch</type>
+<index>2</index>
+<name>ovs2</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="5">
+<type>host</type>
+<index>3</index>
+<name>container3</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="6">
+<type>host</type>
+<index>4</index>
+<name>container4</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="7">
+<type>switch</type>
+<index>3</index>
+<name>ovs3</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="8">
+<type>host</type>
+<index>5</index>
+<name>container5</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="9">
+<type>host</type>
+<index>6</index>
+<name>container6</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="10">
+<type>switch</type>
+<index>4</index>
+<name>ovs4</name>
+<deployed>true</deployed>
+<vid>4</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="13">
+<type>switch</type>
+<index>5</index>
+<name>ovs5</name>
+<deployed>true</deployed>
+<vid>5</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="14">
+<type>host</type>
+<index>9</index>
+<name>container9</name>
+<deployed>true</deployed>
+<vid>5</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="15">
+<type>host</type>
+<index>10</index>
+<name>container10</name>
+<deployed>true</deployed>
+<vid>5</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="16">
+<type>controller</type>
+<index>1</index>
+<name>controller</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<ip>192.168.57.106</ip>
+<port>5563</port>
+</node>
+<node id="12">
+<type>host</type>
+<index>8</index>
+<name>container8</name>
+<deployed>true</deployed>
+<vid>4</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="11">
+<type>host</type>
+<index>7</index>
+<name>container7</name>
+<deployed>true</deployed>
+<vid>4</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="17">
+<type>host</type>
+<index>11</index>
+<name>container11</name>
+<deployed>true</deployed>
+<vid>4</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="18">
+<type>host</type>
+<index>12</index>
+<name>container12</name>
+<deployed>true</deployed>
+<vid>4</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="19">
+<type>host</type>
+<index>13</index>
+<name>container13</name>
+<deployed>true</deployed>
+<vid>5</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="20">
+<type>host</type>
+<index>14</index>
+<name>container14</name>
+<deployed>true</deployed>
+<vid>5</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="21">
+<type>host</type>
+<index>15</index>
+<name>container15</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="22">
+<type>host</type>
+<index>16</index>
+<name>container16</name>
+<deployed>true</deployed>
+<vid>2</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="23">
+<type>host</type>
+<index>17</index>
+<name>container17</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="24">
+<type>host</type>
+<index>18</index>
+<name>container18</name>
+<deployed>true</deployed>
+<vid>3</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="25">
+<type>host</type>
+<index>19</index>
+<name>container19</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="26">
+<type>host</type>
+<index>20</index>
+<name>container20</name>
+<deployed>true</deployed>
+<vid>1</vid>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<link id="1">
+<from>1</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="2">
+<from>1</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="3">
+<from>7</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+<deployed>true</deployed>
+</link>
+<link id="4">
+<from>4</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="5">
+<from>4</from>
+<to>6</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="6">
+<from>7</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="7">
+<from>7</from>
+<to>9</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="8">
+<from>7</from>
+<to>10</to>
+<bandwidth>1000</bandwidth>
+<deployed>true</deployed>
+</link>
+<link id="11">
+<from>7</from>
+<to>13</to>
+<bandwidth>1000</bandwidth>
+<deployed>true</deployed>
+</link>
+<link id="12">
+<from>13</from>
+<to>14</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="13">
+<from>13</from>
+<to>15</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="14">
+<from>1</from>
+<to>7</to>
+<bandwidth>1000</bandwidth>
+<deployed>true</deployed>
+</link>
+<link id="15">
+<from>1</from>
+<to>16</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="10">
+<from>12</from>
+<to>10</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="9">
+<from>11</from>
+<to>10</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="16">
+<from>17</from>
+<to>10</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="17">
+<from>18</from>
+<to>10</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="18">
+<from>19</from>
+<to>13</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="19">
+<from>20</from>
+<to>13</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="20">
+<from>21</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="21">
+<from>22</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="22">
+<from>23</from>
+<to>7</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="23">
+<from>24</from>
+<to>7</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="24">
+<from>25</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="25">
+<from>26</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+</link>
+</config>

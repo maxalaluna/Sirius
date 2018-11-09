@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config id="3">
+<image>
+<name>host</name>
+<script>docker run -dit --name %NAME% --hostname %NAME% --net=none host bash</script>
+</image>
+<image>
+<name>clinidata_pg</name>
+<script>docker run -dit --name %NAME% --hostname %NAME% --net=none -p 5432:5432 clinidata_pg</script>
+<script>sleep 10</script>
+<script>docker exec %NAME% psql -f /tmp/clinidata_20170113.dump postgres -U postgres</script>
+</image>
+<image>
+<name>clinidata_tc</name>
+<script>docker run -it --name %NAME% --hostname %NAME% --add-host="clinidata_pg:10.0.0.1" -p 8585:8585 -d clinidata_tc</script>
+</image>
+<cloud id="1">
+<name>default</name>
+<provider>none</provider>
+<username>none</username>
+<identity>none</identity>
+<credential>none</credential>
+<key>none</key>
+</cloud>
+<cloud id="2">
+<name>default</name>
+<provider>none</provider>
+<username>none</username>
+<identity>none</identity>
+<credential>none</credential>
+<key>none</key>
+</cloud>
+<vm id="1">
+<name>vm1</name>
+<pid>none</pid>
+<cid>1</cid>
+<location>none</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="2">
+<name>vm2</name>
+<pid>none</pid>
+<cid>2</cid>
+<location>none</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<node id="1">
+<type>switch</type>
+<index>1</index>
+<name>s1</name>
+<vid>1</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="2">
+<type>switch</type>
+<index>2</index>
+<name>s2</name>
+<vid>2</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<cpu>100</cpu>
+</node>
+<node id="3">
+<type>host</type>
+<index>1</index>
+<name>h1</name>
+<vid>2</vid>
+<ip>10.0.0.1</ip>
+<mac>00:00:00:00:00:01</mac>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<node id="4">
+<type>host</type>
+<index>2</index>
+<name>h2</name>
+<vid>1</vid>
+<ip>10.0.0.2</ip>
+<mac>00:00:00:00:00:02</mac>
+<image>host</image>
+<cpu>100</cpu>
+</node>
+<link id="1">
+<from>1</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="2">
+<from>3</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+</link>
+<link id="3">
+<from>4</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+</link>
+</config>

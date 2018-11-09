@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<node id="1">
+<index>1</index>
+<type>host</type>
+<name>h1</name>
+<ip>10.0.1.1</ip>
+<x>0</x>
+<y>0</y>
+<cloud>1</cloud>
+<tenant>1</tenant>
+</node>
+<node id="2">
+<index>2</index>
+<type>host</type>
+<name>h2</name>
+<ip>10.0.1.2</ip>
+<x>0</x>
+<y>0</y>
+<cloud>1</cloud>
+<tenant>1</tenant>
+</node>
+<node id="3">
+<index>3</index>
+<type>host</type>
+<name>h3</name>
+<ip>10.0.1.3</ip>
+<x>0</x>
+<y>0</y>
+<tenant>1</tenant>
+</node>
+<node id="4">
+<index>4</index>
+<type>host</type>
+<name>h4</name>
+<ip>10.0.1.4</ip>
+<x>0</x>
+<y>0</y>
+<tenant>1</tenant>
+</node>
+<node id="5">
+<index>1</index>
+<type>switch</type>
+<name>s1</name>
+<ip>127.0.0.1</ip>
+<cpu>20</cpu>
+<x>0</x>
+<y>0</y>
+<cloud>1</cloud>
+<tenant>1</tenant>
+<version>0</version>
+</node>
+<node id="6">
+<index>2</index>
+<type>switch</type>
+<name>s2</name>
+<ip>127.0.0.1</ip>
+<cpu>20</cpu>
+<x>0</x>
+<y>0</y>
+<tenant>1</tenant>
+<version>0</version>
+</node>
+<node id="7">
+<index>5</index>
+<type>host</type>
+<name>h1</name>
+<ip>10.0.2.1</ip>
+<x>0</x>
+<y>0</y>
+<cloud>1</cloud>
+<tenant>2</tenant>
+</node>
+<node id="8">
+<index>6</index>
+<type>host</type>
+<name>h2</name>
+<ip>10.0.2.2</ip>
+<x>0</x>
+<y>0</y>
+<tenant>2</tenant>
+</node>
+<node id="9">
+<index>7</index>
+<type>host</type>
+<name>h3</name>
+<ip>10.0.2.3</ip>
+<x>0</x>
+<y>0</y>
+<cloud>2</cloud>
+<tenant>2</tenant>
+</node>
+<node id="10">
+<index>8</index>
+<type>host</type>
+<name>h4</name>
+<ip>10.0.2.4</ip>
+<x>0</x>
+<y>0</y>
+<cloud>2</cloud>
+<tenant>2</tenant>
+</node>
+<node id="11">
+<index>3</index>
+<type>switch</type>
+<name>s1</name>
+<ip>127.0.0.1</ip>
+<cpu>20</cpu>
+<x>0</x>
+<y>0</y>
+<cloud>0</cloud>
+<tenant>2</tenant>
+<version>0</version>
+</node>
+<node id="12">
+<index>4</index>
+<type>switch</type>
+<name>s2</name>
+<ip>127.0.0.1</ip>
+<cpu>20</cpu>
+<x>0</x>
+<y>0</y>
+<cloud>1</cloud>
+<tenant>2</tenant>
+<version>0</version>
+</node>
+<node id="13">
+<index>5</index>
+<type>switch</type>
+<name>s3</name>
+<ip>127.0.0.1</ip>
+<cpu>20</cpu>
+<x>0</x>
+<y>0</y>
+<cloud>0</cloud>
+<tenant>2</tenant>
+<secure>0</secure>
+<version>0</version>
+</node>
+<link id="1">
+<from>1</from>
+<to>5</to>
+</link>
+<link id="2">
+<from>2</from>
+<to>5</to>
+</link>
+<link id="3">
+<from>3</from>
+<to>6</to>
+</link>
+<link id="4">
+<from>4</from>
+<to>6</to>
+</link>
+<link id="5">
+<from>5</from>
+<to>6</to>
+</link>
+<link id="6">
+<from>7</from>
+<to>11</to>
+</link>
+<link id="7">
+<from>8</from>
+<to>12</to>
+</link>
+<link id="8">
+<from>9</from>
+<to>13</to>
+</link>
+<link id="9">
+<from>10</from>
+<to>13</to>
+</link>
+<link id="10">
+<from>11</from>
+<to>12</to>
+</link>
+<link id="11">
+<from>12</from>
+<to>13</to>
+<secure>0</secure>
+</link>
+<link id="12">
+<from>11</from>
+<to>13</to>
+<secure>0</secure>
+</link>
+</config>

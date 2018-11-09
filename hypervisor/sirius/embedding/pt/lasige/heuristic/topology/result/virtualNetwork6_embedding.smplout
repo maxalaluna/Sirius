@@ -1,0 +1,4 @@
+Working node of 1 -> B
+Working node of 2 -> G
+Working links for (1,2) -> (A,B) (A,G) 
+Working path for (1,2) -> B A G 

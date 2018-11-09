@@ -1,0 +1,7 @@
+Working node of 1 -> B
+Working node of 4 -> A
+Working node of 7 -> C
+Working links for (1,4) -> (B,A) 
+Working path for (1,4) -> B A 
+Working links for (1,7) -> (B,C) 
+Working path for (1,7) -> B C 

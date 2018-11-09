@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config id="18">
+<cloud id="0">
+<name>default</name>
+<provider>nc</provider>
+<username>nc</username>
+<identity>nc</identity>
+<credential>nc</credential>
+</cloud>
+<vm id="1">
+<name>vm1</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="2">
+<name>vm2</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<node id="1">
+<type>switch</type>
+<index>1</index>
+<name>s1</name>
+<vid>1</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>5</mapping>
+<cpu>100</cpu>
+</node>
+<node id="2">
+<type>switch</type>
+<index>2</index>
+<name>s2</name>
+<vid>2</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>2</mapping>
+<cpu>100</cpu>
+</node>
+<node id="3">
+<type>host</type>
+<index>1</index>
+<name>h1</name>
+<vid>2</vid>
+<ip>10.0.0.1</ip>
+<mac>00:00:00:00:00:01</mac>
+<port>70</port>
+<mapping>49</mapping>
+<cpu>100</cpu>
+</node>
+<node id="4">
+<type>host</type>
+<index>2</index>
+<name>h2</name>
+<vid>2</vid>
+<ip>10.0.0.2</ip>
+<mac>00:00:00:00:00:02</mac>
+<port>71</port>
+<mapping>50</mapping>
+<cpu>100</cpu>
+</node>
+<node id="5">
+<type>host</type>
+<index>3</index>
+<name>h3</name>
+<vid>2</vid>
+<ip>10.0.0.3</ip>
+<mac>00:00:00:00:00:03</mac>
+<port>72</port>
+<mapping>51</mapping>
+<cpu>100</cpu>
+</node>
+<node id="6">
+<type>host</type>
+<index>4</index>
+<name>h4</name>
+<vid>2</vid>
+<ip>10.0.0.4</ip>
+<mac>00:00:00:00:00:04</mac>
+<port>73</port>
+<mapping>52</mapping>
+<cpu>100</cpu>
+</node>
+<node id="7">
+<type>host</type>
+<index>5</index>
+<name>h5</name>
+<vid>2</vid>
+<ip>10.0.0.5</ip>
+<mac>00:00:00:00:00:05</mac>
+<port>74</port>
+<mapping>53</mapping>
+<cpu>100</cpu>
+</node>
+<node id="8">
+<type>host</type>
+<index>6</index>
+<name>h6</name>
+<vid>1</vid>
+<ip>10.0.0.6</ip>
+<mac>00:00:00:00:00:06</mac>
+<port>97</port>
+<mapping>142</mapping>
+<cpu>100</cpu>
+</node>
+<node id="9">
+<type>host</type>
+<index>7</index>
+<name>h7</name>
+<vid>1</vid>
+<ip>10.0.0.7</ip>
+<mac>00:00:00:00:00:07</mac>
+<port>98</port>
+<mapping>143</mapping>
+<cpu>100</cpu>
+</node>
+<node id="10">
+<type>host</type>
+<index>8</index>
+<name>h8</name>
+<vid>1</vid>
+<ip>10.0.0.8</ip>
+<mac>00:00:00:00:00:08</mac>
+<port>99</port>
+<mapping>144</mapping>
+<cpu>100</cpu>
+</node>
+<node id="11">
+<type>host</type>
+<index>9</index>
+<name>h9</name>
+<vid>1</vid>
+<ip>10.0.0.9</ip>
+<mac>00:00:00:00:00:09</mac>
+<port>100</port>
+<mapping>145</mapping>
+<cpu>100</cpu>
+</node>
+<node id="12">
+<type>host</type>
+<index>10</index>
+<name>h10</name>
+<vid>1</vid>
+<ip>10.0.0.10</ip>
+<mac>00:00:00:00:00:0A</mac>
+<port>101</port>
+<mapping>146</mapping>
+<cpu>100</cpu>
+</node>
+<link id="1">
+<from>1</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+<route>4</route>
+</link>
+<link id="2">
+<from>3</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+<route>48</route>
+</link>
+<link id="3">
+<from>4</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+<route>49</route>
+</link>
+<link id="4">
+<from>5</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+<route>50</route>
+</link>
+<link id="5">
+<from>6</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+<route>51</route>
+</link>
+<link id="6">
+<from>7</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+<route>52</route>
+</link>
+<link id="7">
+<from>8</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+<route>141</route>
+</link>
+<link id="8">
+<from>9</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+<route>142</route>
+</link>
+<link id="9">
+<from>10</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+<route>143</route>
+</link>
+<link id="10">
+<from>11</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+<route>144</route>
+</link>
+<link id="11">
+<from>12</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+<route>145</route>
+</link>
+</config>

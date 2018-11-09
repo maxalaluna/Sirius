@@ -1,0 +1,24 @@
+console_admin_username = admin
+console_admin_password = sirius
+console_session_timeout = 600
+console_listening_port = 5001
+console_controller_timeout = 30
+console_ssh_max_tries = 3
+console_admin_ip = 10.8.0.1
+console_auto_save = true
+console_demo_mode = false
+docker_container_prefix = "container"
+simulated_tenant_number = 2
+public_cloud_sync = true
+private_cloud_sync = true
+
+default_openflow_version = 3
+default_bridge_name = br1
+default_ip_range = 10.0.0.0
+default_mac_range = 00:00:00:00:00:00
+default_max_flow_size = 1000
+default_public_ip = 127.0.0.1
+default_private_ip = 127.0.0.1
+default_link_bandwidth = 1000
+default_link_delay = 0
+default_link_loss_rate = 0

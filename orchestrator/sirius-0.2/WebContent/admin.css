@@ -1,0 +1,205 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+.scroll {
+	max-height: 500px;
+	overflow: auto;
+}
+.table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.progressbar {
+    margin-top: 10px;
+}
+.button {
+	vertical-align: middle;
+	border-radius: 5px 5px 5px 5px;
+	background-color: white;
+    text-decoration: none;
+    cursor: pointer;
+	height: 40px;
+	width: 40px;
+    border: none;
+}
+.button:hover {
+    background-color: #007fff;
+    color: white;
+}
+.icon {
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;	
+}
+.logo {
+	float: right;
+	border-radius: 0px 5px 5px 0px;
+	width: 130px;
+}
+.toolbar {
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	top: 5px;
+	bottom: 5px;
+}
+.toolbar-left {
+	position: absolute;
+	background-color: #0066cc;
+	border-radius: 5px 5px 5px 5px;
+	left: 10px;
+	right: 5px;
+	top: 10px;
+	height: 50px;
+}
+.toolbar-right {
+	position: absolute;
+	background-color: #0066cc;
+	border-radius: 5px 5px 5px 5px;
+	left: 5px;
+	right: 10px;
+	top: 10px;
+	height: 50px;
+}
+.header {
+	position: absolute;
+	background-color: #0066cc;
+	border-radius: 5px 5px 0px 0px;	
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	height: 30px;
+	right: 0px;
+	left: 0px;
+}
+.footer {
+	position: absolute;
+	border-radius: 0px 0px 5px 5px;
+	background-color: white;
+	top: 30px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;	
+}
+.left {
+	position: absolute;
+	left: 0px;
+	width: 50%;
+	top: 0px;
+	bottom: 0px;
+}
+.right {
+	position: absolute;
+	right: 0px;
+	width: 50%;
+	top: 0px;
+	bottom: 0px;
+}
+.top {
+	position: absolute;
+	left: 0px;
+	height: 60%;
+	top: 0px;
+	right: 0px;
+}
+.bottom {
+	position: absolute;
+	left: 0px;
+	height: 40%;
+	bottom: 0px;
+	right: 0px;
+}
+.frame-left {
+	position: absolute;
+	top: 70px;
+	left: 10px;
+	right: 5px;
+	bottom: 10px;
+}	
+.frame-right {
+	position: absolute;
+	top: 70px;
+	left: 5px;
+	right: 10px;
+	bottom: 10px;
+}
+.frame-top {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 5px;
+}
+.frame-bottom {
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+.physical {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 140px;		
+}
+.rates {
+	position: absolute;
+	height: 130px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;		
+}
+.tenant {
+	position: absolute;
+	background-color: white;
+	top: 30px;
+	left: 0px;
+	right: 0px;
+	bottom: -15px;
+}
+.loader1 {
+	position: absolute;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	float: center;
+	top: 10px;
+	width: 100px;
+	left: 20px;
+	bottom: 0px;
+}
+.loader2 {
+	position: absolute;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	float: center;
+	top: 10px;
+	width: 100px;
+	left: 220px;
+	bottom: 0px;
+}
+.loader3 {
+	position: absolute;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	float: center;
+	top: 10px;
+	width: 100px;
+	left: 120px;
+	bottom: 0px;
+}
+.loader4 {
+	position: absolute;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+	float: center;
+	top: 10px;
+	width: 100px;
+	left: 320px;
+	bottom: 0px;
+}

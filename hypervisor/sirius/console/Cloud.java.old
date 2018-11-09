@@ -1,0 +1,88 @@
+package net.floodlightcontroller.sirius.console;
+
+import java.util.ArrayList;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+public class Cloud {
+	
+	private int id;
+	private String name;
+	private String username;
+	private String provider;
+	private String identity;
+	private String credential;
+	private int securityLevel;
+	
+	public Cloud(int id, String name, String provider, String username,
+			String identity, String credential, int securityLevel) {
+		this.id = id;
+		this.name = name;
+		this.provider = provider;
+		this.username = username;
+		this.identity = identity;
+		this.credential = credential;
+		this.securityLevel = securityLevel;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getProvider() {
+		return provider;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public String getIdentity() {
+		return identity;
+	}
+
+	public String getCredential() {
+		return credential;
+	}
+		
+	public int getSecurityLevel() {
+		return securityLevel;
+	}
+
+	public Element toXML(Document doc) {
+		Element elem = doc.createElement("cloud");
+		elem.setAttribute("id", Integer.toString(id));
+		Config.writeXMLString(doc, elem, "name", name);
+		Config.writeXMLString(doc, elem, "provider", provider);
+		Config.writeXMLString(doc, elem, "username", username);
+		Config.writeXMLString(doc, elem, "identity", identity);
+		Config.writeXMLString(doc, elem, "credential", credential);
+		Config.writeXMLInteger(doc, elem, "security", securityLevel);
+		return elem;
+	}
+	
+	public void toJson(ArrayList<Object> data) {
+		data.add(Console.tuple("Name", name));
+		data.add(Console.tuple("Provider", provider));
+		data.add(Console.tuple("Security Level", securityLevel));
+	}
+	
+	public static Cloud findFromId(Network network, int cid) {
+		for (Cloud cloud : network.getClouds())
+			if (cloud.getId() == cid)
+				return cloud;
+		return null;
+	}
+	
+	public static Vm findGateway(Network network, int cid) {
+		for (Vm vm : network.getVMs())
+			if (vm.getCloud().getId() == cid 
+					&& vm.isGateway() == true)
+				return vm;
+		return null;
+	}
+}

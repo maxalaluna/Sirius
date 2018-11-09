@@ -1,0 +1,172 @@
+package net.floodlightcontroller.sirius.console;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+public class Switch extends Node {
+
+	private int openflowVersion;
+	private int securityLevel;
+	private int dependabilityLevel;
+	private int maxFlowSize;
+	private String bridgeName;
+	private String dpid;
+	private int tenant;
+	private int mapping;
+	private int cpu;
+	
+	public Switch(int id, int index, String name, Vm vm, boolean deployed, 
+			int openflowVersion, String dpid, String bridgeName, int securityLevel, 
+			int dependabilityLevel, int maxFlowSize, int cpu, int tenant, int mapping) {
+		super(id, index, name, vm, deployed);
+		this.openflowVersion = openflowVersion;
+		this.securityLevel = securityLevel;
+		this.dependabilityLevel = dependabilityLevel;
+		this.maxFlowSize = maxFlowSize;
+		this.bridgeName = bridgeName;
+		this.dpid = dpid;
+		this.tenant = tenant;
+		this.mapping = mapping;
+		this.cpu = cpu;
+	}
+
+	public int getOpenflowVersion() {
+		return openflowVersion;
+	}
+
+	public void setOpenflowVersion(int openflowVersion) {
+		this.openflowVersion = openflowVersion;
+	}
+
+	public String getDpid() {
+		return dpid;
+	}
+
+	public void setDpid(String dpid) {
+		this.dpid = dpid;
+	}
+
+	public int getMaxFlowSize() {
+		return maxFlowSize;
+	}
+
+	public void setMaxFlowSize(int maxFlowSize) {
+		this.maxFlowSize = maxFlowSize;
+	}
+
+	public String getBridgeName() {
+		return bridgeName;
+	}
+
+	public void setBridgeName(String bridgeName) {
+		this.bridgeName = bridgeName;
+	}
+
+	public int getSecurityLevel() {
+		return securityLevel;
+	}
+
+	public void setSecurityLevel(int securityLevel) {
+		this.securityLevel = securityLevel;
+	}
+
+	public int getDependabilityLevel() {
+		return dependabilityLevel;
+	}
+
+	public void setDependabilityLevel(int dependabilityLevel) {
+		this.dependabilityLevel = dependabilityLevel;
+	}
+
+	public int getTenant() {
+		return tenant;
+	}
+
+	public void setTenant(int tenant) {
+		this.tenant = tenant;
+	}
+
+	public int getMapping() {
+		return mapping;
+	}
+
+	public void setMapping(int mapping) {
+		this.mapping = mapping;
+	}
+
+	public int getCpu() {
+		return cpu;
+	}
+
+	public void setCpu(int cpu) {
+		this.cpu = cpu;
+	}
+
+	public String getType() {
+		return "switch";
+	}
+	
+	public String getTitle() {
+		return "OpenFlow 1." + openflowVersion;
+	}
+
+	public String getImage() {
+		int state = getVm().getCloud().getId();
+		if (!isDeployed()) state = - state;
+		return "img/switch" + state + ".png";
+	}
+
+	public Element toXML(Document doc) {
+		Element elem = super.toXML(doc);
+		Config.writeXMLInteger(doc, elem, "openflow", openflowVersion);
+		Config.writeXMLInteger(doc, elem, "security", securityLevel);
+		Config.writeXMLInteger(doc, elem, "dependability", dependabilityLevel);
+		Config.writeXMLInteger(doc, elem, "flows", maxFlowSize);
+		Config.writeXMLString(doc, elem, "bridge", bridgeName);
+		Config.writeXMLString(doc, elem, "dpid", dpid);
+		Config.writeXMLInteger(doc, elem, "tenant", tenant);
+		Config.writeXMLInteger(doc, elem, "mapping", mapping);
+		Config.writeXMLInteger(doc, elem, "cpu", cpu);
+		return elem;
+	}
+	
+	public void toJson(ArrayList<Object> data) {
+		super.toJson(data);
+		data.add(Console.tuple("Openflow Version", "1." + openflowVersion, true));
+		data.add(Console.tuple("Security Level", securityLevel, true));
+		data.add(Console.tuple("Dependability Level", dependabilityLevel, true));
+		data.add(Console.tuple("Max Flow Size", maxFlowSize, true));
+		data.add(Console.tuple("Bridge Name", bridgeName, true));
+		data.add(Console.tuple("Datapath ID", dpid, false));
+//		data.add(Console.tuple("Tenant ID", tenant));
+		data.add(Console.tuple("Mapping ID", mapping, false));
+		data.add(Console.tuple("CPU Strength", cpu, true));
+	}
+	
+	public static int newIndex(Network network) {
+		List<Integer> ids = new LinkedList<Integer>();
+		for (Node node : network.getNodes())
+			if (node instanceof Switch)
+				ids.add(node.getIndex());
+		Collections.sort(ids);
+		int index = 1;
+		for (int id : ids)
+			if (id != index)
+				return index;
+			else index++;
+		return index;
+	}
+	
+	public boolean isIsolated(Network network) {
+		ArrayList<Node> peers = findPeers(network);
+		int nbSwitch = 0;
+		for (Node peer : peers)
+			if (peer instanceof Switch)
+				nbSwitch++;
+		return nbSwitch == 1;
+	}
+}

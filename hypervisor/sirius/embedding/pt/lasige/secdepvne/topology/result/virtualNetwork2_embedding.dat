@@ -1,0 +1,109 @@
+data;
+
+# SNodes: 5, SEdges: 4
+
+set SNodes := A B C D E ;
+
+param cpuSup := 
+A 100
+B 100
+C 100
+D 100
+E 100
+;
+
+param secSupNode := 
+A 0
+B 0
+C 0
+D 0
+E 0
+;
+
+param bwSup:
+  A B C D E :=
+A 0 1000 0 0 0 
+B 1000 0 1000 1000 1000 
+C 0 1000 0 0 0 
+D 0 1000 0 0 0 
+E 0 1000 0 0 0 
+;
+
+param secSupEdge :
+  A B C D E :=
+A 0 0 0 0 0 
+B 0 0 0 0 0 
+C 0 0 0 0 0 
+D 0 0 0 0 0 
+E 0 0 0 0 0 
+;
+
+param weight :
+  A B C D E :=
+A 0 1 0 0 0 
+B 1 0 1 1 1 
+C 0 1 0 0 0 
+D 0 1 0 0 0 
+E 0 1 0 0 0 
+;
+
+set Clouds := 1 2 ;
+
+param doesItBelong := 
+1 A 1
+1 B 0
+1 C 0
+1 D 0
+1 E 0
+2 A 0
+2 B 1
+2 C 1
+2 D 1
+2 E 1
+;
+
+param cloudSecSup := 
+A 2
+B 1
+C 1
+D 1
+E 1
+;
+
+# VNodes: 2, VEdges: 1
+
+set VNodes := 1 3 ;
+
+set VEdges := (1,3);
+
+param cpuDem := 
+1 100
+3 100
+;
+
+param secDemNode := 
+1 0
+3 0
+;
+
+param bwDem := 
+1 3 1000
+;
+
+param secDemEdge := 
+1 3 0
+;
+
+param cloudSecDem := 
+1 0
+3 0
+;
+
+param wantBackup := 0;
+
+param bvNodeLocalization := 
+1 0
+3 0
+;
+
+end;

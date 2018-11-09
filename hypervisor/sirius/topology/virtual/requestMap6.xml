@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config id="3">
+<cloud id="0">
+<name>default</name>
+<provider>nc</provider>
+<username>nc</username>
+<identity>nc</identity>
+<credential>nc</credential>
+</cloud>
+<vm id="1">
+<name>vm1</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="2">
+<name>vm2</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="3">
+<name>vm3</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="5">
+<name>vm5</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="7">
+<name>vm7</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="4">
+<name>vm4</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="6">
+<name>vm6</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<vm id="8">
+<name>vm8</name>
+<pid>nc</pid>
+<location>nc</location>
+<public-ip>127.0.0.1</public-ip>
+<private-ip>127.0.0.1</private-ip>
+</vm>
+<node id="1">
+<type>switch</type>
+<index>1</index>
+<name>s1</name>
+<vid>1</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>2</mapping>
+<cpu>100</cpu>
+</node>
+<node id="2">
+<type>switch</type>
+<index>2</index>
+<name>s2</name>
+<vid>2</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>5</mapping>
+<cpu>100</cpu>
+</node>
+<node id="3">
+<type>switch</type>
+<index>3</index>
+<name>s3</name>
+<vid>3</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>12</mapping>
+<cpu>100</cpu>
+</node>
+<node id="5">
+<type>switch</type>
+<index>5</index>
+<name>s5</name>
+<vid>5</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>13</mapping>
+<cpu>100</cpu>
+</node>
+<node id="7">
+<type>switch</type>
+<index>7</index>
+<name>s7</name>
+<vid>7</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>114</mapping>
+<cpu>100</cpu>
+</node>
+<node id="4">
+<type>switch</type>
+<index>4</index>
+<name>s4</name>
+<vid>4</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>14</mapping>
+<cpu>100</cpu>
+</node>
+<node id="8">
+<type>switch</type>
+<index>6</index>
+<name>s6</name>
+<vid>6</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>8</mapping>
+<cpu>100</cpu>
+</node>
+<node id="10">
+<type>switch</type>
+<index>8</index>
+<name>s8</name>
+<vid>8</vid>
+<openflow>3</openflow>
+<flows>1000</flows>
+<bridge>br1</bridge>
+<mapping>15</mapping>
+<cpu>100</cpu>
+</node>
+<node id="13">
+<type>host</type>
+<index>5</index>
+<name>h5</name>
+<vid>3</vid>
+<ip>10.0.0.5</ip>
+<mac>00:00:00:00:00:05</mac>
+<port>4</port>
+<mapping>23</mapping>
+<cpu>100</cpu>
+</node>
+<node id="6">
+<type>host</type>
+<index>1</index>
+<name>h1</name>
+<vid>8</vid>
+<ip>10.0.0.1</ip>
+<mac>00:00:00:00:00:01</mac>
+<port>317</port>
+<mapping>17</mapping>
+<cpu>100</cpu>
+</node>
+<node id="9">
+<type>host</type>
+<index>2</index>
+<name>h2</name>
+<vid>6</vid>
+<ip>10.0.0.2</ip>
+<mac>00:00:00:00:00:02</mac>
+<port>91</port>
+<mapping>10</mapping>
+<cpu>100</cpu>
+</node>
+<node id="11">
+<type>host</type>
+<index>3</index>
+<name>h3</name>
+<vid>1</vid>
+<ip>10.0.0.3</ip>
+<mac>00:00:00:00:00:03</mac>
+<port>519</port>
+<mapping>7</mapping>
+<cpu>100</cpu>
+</node>
+<link id="1">
+<from>1</from>
+<to>2</to>
+<bandwidth>1000</bandwidth>
+<route>4</route>
+</link>
+<link id="2">
+<from>1</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+<route>11</route>
+</link>
+<link id="4">
+<from>1</from>
+<to>5</to>
+<bandwidth>1000</bandwidth>
+<route>12</route>
+</link>
+<link id="6">
+<from>1</from>
+<to>7</to>
+<bandwidth>1000</bandwidth>
+<route>113</route>
+</link>
+<link id="3">
+<from>2</from>
+<to>4</to>
+<bandwidth>1000</bandwidth>
+<route>13</route>
+</link>
+<link id="7">
+<from>2</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+<route>7</route>
+</link>
+<link id="9">
+<from>2</from>
+<to>10</to>
+<bandwidth>1000</bandwidth>
+<route>14</route>
+</link>
+<link id="12">
+<from>13</from>
+<to>3</to>
+<bandwidth>1000</bandwidth>
+<route>22</route>
+</link>
+<link id="5">
+<from>6</from>
+<to>10</to>
+<bandwidth>1000</bandwidth>
+<route>16</route>
+</link>
+<link id="8">
+<from>9</from>
+<to>8</to>
+<bandwidth>1000</bandwidth>
+<route>9</route>
+</link>
+<link id="10">
+<from>11</from>
+<to>1</to>
+<bandwidth>1000</bandwidth>
+<route>6</route>
+</link>
+</config>

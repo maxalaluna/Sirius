@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+<cloud id="0">
+<desc>Private Cloud</desc>
+</cloud>	
+<cloud id="1">
+<desc>Public Cloud 1</desc>
+</cloud>	
+<cloud id="2">
+<desc>Public Cloud 2</desc>
+</cloud>	
+</config>
